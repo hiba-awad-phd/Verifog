@@ -1,0 +1,13 @@
+AttributeType.allInstances()
+  ->select(f | f.name = 'coveredPlaces')
+  -> collect(f |   let NumberofPlaces: Integer = if f->exists(a | a.name = 'coveredPlaces') then
+    f.instances.value.toInteger()->sum()
+  else
+    0
+      endif
+  in
+  let NumberOfCameras: Integer = AttributeType.allInstances()
+  ->select(n | n.name = 'image_quality').instances->size()
+  in 
+  'The parking ratio = ' + (NumberOfCameras/NumberofPlaces).toString()
+  )

@@ -1,0 +1,5 @@
+if NodeType.allInstances()->select(f | f.tags->exists(t | t.key = 'greenEnergy' and (t.value = 'low' or t.value = 'null' or t.value='moderate')))->size() > NodeType.allInstances()->size()/2 then
+'The system is not green'
+else
+'The system is Green'
+endif

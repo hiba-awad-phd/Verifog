@@ -1,0 +1,16 @@
+  NodeType.allInstances()
+    ->collect(f |
+        let list: Sequence(String) =
+            if f.tags->exists(t | t.key = 'autorizedToken' and t.value = 1) then Sequence{ 'Very Easy ' + f.name } 
+            else if f.tags->exists(t | t.key = 'autorizedToken' and t.value = 2) then Sequence{ 'Easy ' + f.name } 
+            else if f.tags->exists(t | t.key = 'autorizedToken' and t.value = 3) then Sequence{ 'Moderate ' + f.name } 
+            else if f.tags->exists(t | t.key = 'autorizedToken' and t.value = 4) then Sequence{ 'Strong ' + f.name } 
+            else Sequence{ 'Very Strong ' + f.name }
+            endif
+            endif
+            endif
+            endif
+            
+        in 
+        list
+    )

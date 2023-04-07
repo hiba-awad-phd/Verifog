@@ -1,0 +1,15 @@
+AttributeType.allInstances()->select(f | f.name = 'energy_consumption')
+  ->collect(f | let consumedEnergy: Integer = f.instances.value.toInteger()->sum()
+               in
+               AttributeType.allInstances()->select(n | n.name = 'green_consumption')
+                 ->collect(n | let consumedGreenEnergy: Integer = if n.instances.value <> null then
+                                                                     n.instances.value.toInteger()->sum()
+                                                                   else
+                                                                     0
+                                                                   endif
+                                in
+                                'The total consumed green energy is ' + consumedGreenEnergy.toString() +
+                                ' and it is ' + (((consumedGreenEnergy*100)/consumedEnergy).toString()) +
+                                '% of the total consumed energy. '
+                 )
+  )

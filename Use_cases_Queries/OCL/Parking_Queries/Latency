@@ -1,0 +1,7 @@
+let totalEnhancement: Real =
+  NodeType.allInstances()
+    ->select(f | f.tags->exists(t | t.key = 'detection_quality' and (t.value = 'low' or t.value = 'verylow')))
+    ->collect(f | if f.tags->exists(t | t.key = 'detection_quality' and t.value = 'low') or f.tags->exists(t | t.key = 'detection_quality' and t.value = 'verylow') then 0.702 else 0 endif)
+    ->sum() + 0.00787
+in
+'the latency of the system is ' + totalEnhancement.toString() +  's'

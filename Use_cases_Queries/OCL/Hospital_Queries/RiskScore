@@ -1,0 +1,57 @@
+NodeType.allInstances()
+  
+  ->collect(f | 
+  let risk: Integer=
+    if f.tags->exists(t | t.key = 'impact' and t.value = 'A') 
+    then 100 * 
+      (if f.tags->exists(t | t.key = 'securityLocation' and t.value = 'veryHigh') 
+      then 0 
+      else if f.tags->exists(t | t.key = 'securityLocation' and t.value = 'High') 
+      then 25
+      else if f.tags->exists(t | t.key = 'securityLocation' and t.value = 'moderate') 
+      then 50
+      else if f.tags->exists(t | t.key = 'securityLocation' and t.value = 'low') 
+      then 75
+      else 100
+      endif
+      endif
+      endif
+      endif)
+    else if f.tags->exists(t | t.key = 'impact' and t.value = 'B') 
+    then 50 * 
+     (if f.tags->exists(t | t.key = 'securityLocation' and t.value = 'veryHigh') 
+      then 0 
+      else if f.tags->exists(t | t.key = 'securityLocation' and t.value = 'High') 
+      then 25
+      else if f.tags->exists(t | t.key = 'securityLocation' and t.value = 'moderate') 
+      then 50
+      else if f.tags->exists(t | t.key = 'securityLocation' and t.value = 'low') 
+      then 75
+      else 100
+      endif
+      endif
+      endif
+      endif)
+    else if f.tags->exists(t | t.key = 'impact' and t.value = 'C')
+    then 20 * 
+     (if f.tags->exists(t | t.key = 'securityLocation' and t.value = 'veryHigh') 
+      then 0 
+      else if f.tags->exists(t | t.key = 'securityLocation' and t.value = 'High') 
+      then 25
+      else if f.tags->exists(t | t.key = 'securityLocation' and t.value = 'moderate') 
+      then 50
+      else if f.tags->exists(t | t.key = 'securityLocation' and t.value = 'low') 
+      then 75
+      else 100
+      endif
+      endif
+      endif
+      endif)
+    else
+      null -- return null if impact is not A, B, or C
+    endif
+    endif
+    endif
+    in
+    'the riskscore of the '+ f.name + ' is ' + (risk/100).toString()
+  )

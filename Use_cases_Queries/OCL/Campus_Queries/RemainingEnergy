@@ -1,0 +1,13 @@
+AttributeType.allInstances()->select(f |f.name= 'energy_consumption')
+-> collect(f |   let consumedEnergy: Integer = if self->exists(a | a.name = 'energy_consumption') then
+    f.instances.value.toInteger()->sum()
+ else
+    0
+      endif
+  in
+    if 2000-consumedEnergy > 0 then
+      'The total consumed energy  is ' + consumedEnergy.toString() + ' you still have ' + (2000-consumedEnergy).toString() + ' to attend the threshold'
+    else
+'The total consumed energy  is ' + consumedEnergy.toString() + ' ! you are proceeding the threshold by '+ (2000-consumedEnergy).toString()
+    endif 
+)

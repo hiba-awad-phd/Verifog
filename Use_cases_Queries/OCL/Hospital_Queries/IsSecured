@@ -1,0 +1,15 @@
+if VirtualNodeSpecification.allInstances()->isEmpty() then
+    -- Handle the case where there are no files in the system
+    'Cannot determine if the system is secured because there are no files.'
+else
+    if VirtualNodeSpecification.allInstances()->size() = 0 then
+        -- Handle the case where there are no files in the system
+        'Cannot determine if the system is secured because there are no files.'
+    else
+       if VirtualNodeSpecification.allInstances()->select(f | f.tags->exists(t | t.key = 'securityLocation' and (t.value = 'High' or t.value = 'veryHigh' or t.value='moderate')))->size() > VirtualNodeSpecification.allInstances()->size()/2 then
+        'The system is secured.'
+    else
+            'The system isn' 't secured.'
+        endif
+    endif
+endif

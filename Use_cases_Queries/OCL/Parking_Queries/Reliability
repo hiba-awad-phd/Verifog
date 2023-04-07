@@ -1,0 +1,8 @@
+let NumberOfInstances: Integer =
+  AttributeType.allInstances()
+    ->select(f | f.name = 'image_quality')
+    .instances->select(i | i.value.toInteger() < 50)
+    ->size()
+in
+  'The reliability of the system is ' + (100 - (NumberOfInstances * 100 / AttributeType.allInstances().instances->size())).toString() + ' %'
+  
