@@ -1,0 +1,5 @@
+ApiVersion:v.0.1
+resourceType:Attribute
+name: 'green_consumption'
+type: 'float'
+unitOfMeasurment:

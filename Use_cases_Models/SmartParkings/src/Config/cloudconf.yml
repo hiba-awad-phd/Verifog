@@ -1,0 +1,9 @@
+ApiVersion:v.0.1
+resourceType: VirtualNode
+metadata:
+id: cl
+tags:
+instanceOf:cloudserver
+status:
+hostedOn:cl
+hosts:

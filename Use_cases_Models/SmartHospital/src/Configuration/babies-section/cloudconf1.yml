@@ -1,0 +1,12 @@
+ApiVersion:v.0.1
+resourceType:VirtualNode
+metadata:
+id: cloudconf1
+tags:
+instanceOf:datacenter1
+status:
+hostedOn: cloudconf1
+hosts:
+timeleft: 200
+intrusionDetection: 55
+authorityLevelChecking: 5

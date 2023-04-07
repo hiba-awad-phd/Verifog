@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/fr.imta.semafor.fogAdlModel/src-gen" creationIcons="false"
+    editDirectory="/fr.imta.semafor.fogAdlModel.edit/src-gen" editorDirectory="/fr.imta.semafor.fogAdlModel.editor/src-gen"
+    modelPluginID="fr.imta.semafor.fogAdlModel" modelName="FogAdlModel" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>fogAdlModel.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="FogAdlModel" basePackage="fr.imta.semafor" disposableProviderFactory="true"
+      ecorePackage="fogAdlModel.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="fogAdlModel.ecore#//ComparaisonOperator">
+      <genEnumLiterals ecoreEnumLiteral="fogAdlModel.ecore#//ComparaisonOperator/Equal"/>
+      <genEnumLiterals ecoreEnumLiteral="fogAdlModel.ecore#//ComparaisonOperator/LesserOrEqual"/>
+      <genEnumLiterals ecoreEnumLiteral="fogAdlModel.ecore#//ComparaisonOperator/GreaterOrEqual"/>
+      <genEnumLiterals ecoreEnumLiteral="fogAdlModel.ecore#//ComparaisonOperator/Greater"/>
+      <genEnumLiterals ecoreEnumLiteral="fogAdlModel.ecore#//ComparaisonOperator/Lesser"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="fogAdlModel.ecore#//CPUArchitecture">
+      <genEnumLiterals ecoreEnumLiteral="fogAdlModel.ecore#//CPUArchitecture/Intel"/>
+      <genEnumLiterals ecoreEnumLiteral="fogAdlModel.ecore#//CPUArchitecture/ARM"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="fogAdlModel.ecore#//OperatingSystem">
+      <genEnumLiterals ecoreEnumLiteral="fogAdlModel.ecore#//OperatingSystem/Linux"/>
+      <genEnumLiterals ecoreEnumLiteral="fogAdlModel.ecore#//OperatingSystem/MacOS"/>
+      <genEnumLiterals ecoreEnumLiteral="fogAdlModel.ecore#//OperatingSystem/Windows"/>
+      <genEnumLiterals ecoreEnumLiteral="fogAdlModel.ecore#//OperatingSystem/Android"/>
+      <genEnumLiterals ecoreEnumLiteral="fogAdlModel.ecore#//OperatingSystem/IOS"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="fogAdlModel.ecore#//HealthStatus">
+      <genEnumLiterals ecoreEnumLiteral="fogAdlModel.ecore#//HealthStatus/UP"/>
+      <genEnumLiterals ecoreEnumLiteral="fogAdlModel.ecore#//HealthStatus/DOWN"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="fogAdlModel.ecore#//NetworkClass">
+      <genEnumLiterals ecoreEnumLiteral="fogAdlModel.ecore#//NetworkClass/Ethernet"/>
+      <genEnumLiterals ecoreEnumLiteral="fogAdlModel.ecore#//NetworkClass/Wifi"/>
+      <genEnumLiterals ecoreEnumLiteral="fogAdlModel.ecore#//NetworkClass/Bluetooth"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="fogAdlModel.ecore#//TransportProtocol">
+      <genEnumLiterals ecoreEnumLiteral="fogAdlModel.ecore#//TransportProtocol/TCP"/>
+      <genEnumLiterals ecoreEnumLiteral="fogAdlModel.ecore#//TransportProtocol/UDP"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="fogAdlModel.ecore#//MultiplicityOperator">
+      <genEnumLiterals ecoreEnumLiteral="fogAdlModel.ecore#//MultiplicityOperator/AllOf"/>
+      <genEnumLiterals ecoreEnumLiteral="fogAdlModel.ecore#//MultiplicityOperator/AnyOf"/>
+      <genEnumLiterals ecoreEnumLiteral="fogAdlModel.ecore#//MultiplicityOperator/ExclusivelyOneOf"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="fogAdlModel.ecore#//ResourceType">
+      <genEnumLiterals ecoreEnumLiteral="fogAdlModel.ecore#//ResourceType/VirtualNode"/>
+      <genEnumLiterals ecoreEnumLiteral="fogAdlModel.ecore#//ResourceType/PhysicalNode"/>
+      <genEnumLiterals ecoreEnumLiteral="fogAdlModel.ecore#//ResourceType/NetworkLink"/>
+      <genEnumLiterals ecoreEnumLiteral="fogAdlModel.ecore#//ResourceType/Network"/>
+      <genEnumLiterals ecoreEnumLiteral="fogAdlModel.ecore#//ResourceType/Service"/>
+      <genEnumLiterals ecoreEnumLiteral="fogAdlModel.ecore#//ResourceType/Application"/>
+    </genEnums>
+    <genClasses ecoreClass="fogAdlModel.ecore#//FogResource">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//FogResource/tags"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fogAdlModel.ecore#//FogResource/importedNamespace1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fogAdlModel.ecore#//FogResource/name"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//FogResource/attributes"/>
+    </genClasses>
+    <genClasses ecoreClass="fogAdlModel.ecore#//NodeType">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//NodeType/fogsystem"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//NodeType/constraints"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//NodeType/instances"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//NodeType/downloadLink"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//NodeType/uploadLink"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//NodeType/hostedNode"/>
+    </genClasses>
+    <genClasses ecoreClass="fogAdlModel.ecore#//FogSystem">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//FogSystem/physicalnodespecification"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//FogSystem/networktypes"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//FogSystem/networks"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//FogSystem/applications"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//FogSystem/fogareas"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//FogSystem/attributetypes"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//FogSystem/unitsofmeasurment"/>
+    </genClasses>
+    <genClasses ecoreClass="fogAdlModel.ecore#//Tag">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fogAdlModel.ecore#//Tag/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fogAdlModel.ecore#//Tag/value"/>
+    </genClasses>
+    <genClasses ecoreClass="fogAdlModel.ecore#//Constraint">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fogAdlModel.ecore#//Constraint/operator"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//Constraint/expression"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//Constraint/constrainedPackage"/>
+    </genClasses>
+    <genClasses ecoreClass="fogAdlModel.ecore#//PhysicalNodeSpecification"/>
+    <genClasses ecoreClass="fogAdlModel.ecore#//VirtualNodeSpecification">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fogAdlModel.ecore#//VirtualNodeSpecification/imageName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fogAdlModel.ecore#//VirtualNodeSpecification/imageRegistry"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//VirtualNodeSpecification/replicas"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//VirtualNodeSpecification/hosts"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//VirtualNodeSpecification/hostingNode"/>
+    </genClasses>
+    <genClasses ecoreClass="fogAdlModel.ecore#//Expression"/>
+    <genClasses ecoreClass="fogAdlModel.ecore#//IntegerValueExpression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fogAdlModel.ecore#//IntegerValueExpression/value"/>
+    </genClasses>
+    <genClasses ecoreClass="fogAdlModel.ecore#//AttributeExpression">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//AttributeExpression/attribute"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fogAdlModel.ecore#//AttributeExpression/attributeName"/>
+    </genClasses>
+    <genClasses ecoreClass="fogAdlModel.ecore#//CustomExpression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fogAdlModel.ecore#//CustomExpression/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="fogAdlModel.ecore#//Node">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//Node/isInstanceOf"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fogAdlModel.ecore#//Node/cpuArchitecture"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fogAdlModel.ecore#//Node/OperatingSystem"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fogAdlModel.ecore#//Node/runtimes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fogAdlModel.ecore#//Node/healthStatus"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//Node/hostedVirtualNodes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fogAdlModel.ecore#//Node/CPUCores"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fogAdlModel.ecore#//Node/memory"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fogAdlModel.ecore#//Node/diskStorage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fogAdlModel.ecore#//Node/referenceToVirtualNodeType"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//Node/uploadLink"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//Node/downloadLink"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//Node/hostedServices"/>
+    </genClasses>
+    <genClasses ecoreClass="fogAdlModel.ecore#//VirtualNode">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//VirtualNode/hostingNode"/>
+    </genClasses>
+    <genClasses ecoreClass="fogAdlModel.ecore#//PhysicalNode">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//PhysicalNode/fogarea"/>
+    </genClasses>
+    <genClasses ecoreClass="fogAdlModel.ecore#//NetworkType">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//NetworkType/fogsystem"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//NetworkType/downloadlinks"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//NetworkType/instances"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//NetworkType/uploadLink"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//NetworkType/constraints"/>
+    </genClasses>
+    <genClasses ecoreClass="fogAdlModel.ecore#//NetworkLinkType">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//NetworkLinkType/targetNetwork"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//NetworkLinkType/sourceNode"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//NetworkLinkType/targetNode"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//NetworkLinkType/instances"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//NetworkLinkType/sourceNetworks"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//NetworkLinkType/constraints"/>
+    </genClasses>
+    <genClasses ecoreClass="fogAdlModel.ecore#//NetworkClassExpression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fogAdlModel.ecore#//NetworkClassExpression/value"/>
+    </genClasses>
+    <genClasses ecoreClass="fogAdlModel.ecore#//Network">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//Network/fogsystem"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//Network/downloadLinks"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//Network/isInstanceOf"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//Network/uploadlinks"/>
+    </genClasses>
+    <genClasses ecoreClass="fogAdlModel.ecore#//NetworkLink">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//NetworkLink/targetNetwork"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//NetworkLink/sourceNode"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//NetworkLink/targetNode"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//NetworkLink/isInstanceOf"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fogAdlModel.ecore#//NetworkLink/sourceIpAddress"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fogAdlModel.ecore#//NetworkLink/targetIpAddress"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fogAdlModel.ecore#//NetworkLink/bitrate"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//NetworkLink/sourceNetworks"/>
+    </genClasses>
+    <genClasses ecoreClass="fogAdlModel.ecore#//Application">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//Application/fogSystem"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//Application/serviceTypes"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//Application/services"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//Application/connectortypes"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//Application/connectors"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//Application/constraints"/>
+    </genClasses>
+    <genClasses ecoreClass="fogAdlModel.ecore#//ServiceType">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//ServiceType/application"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//ServiceType/hostedOn"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//ServiceType/implementedBy"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//ServiceType/instances"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//ServiceType/constraints"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//ServiceType/networkPorts"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//ServiceType/incomingDataflows"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//ServiceType/outcomingDataflows"/>
+    </genClasses>
+    <genClasses ecoreClass="fogAdlModel.ecore#//SoftwarePackage">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fogAdlModel.ecore#//SoftwarePackage/installStartScript"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//SoftwarePackage/constraints"/>
+    </genClasses>
+    <genClasses ecoreClass="fogAdlModel.ecore#//NetworkPort">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fogAdlModel.ecore#//NetworkPort/protocol"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fogAdlModel.ecore#//NetworkPort/portNumber"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fogAdlModel.ecore#//NetworkPort/portName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fogAdlModel.ecore#//NetworkPort/hostPort"/>
+    </genClasses>
+    <genClasses ecoreClass="fogAdlModel.ecore#//FogArea">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//FogArea/fogsystem"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//FogArea/nodes"/>
+    </genClasses>
+    <genClasses ecoreClass="fogAdlModel.ecore#//Service">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//Service/instanceOf"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//Service/hostingNode"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//Service/networkports"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//Service/application"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//Service/incomingDataflows"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//Service/outcomingDataflows"/>
+    </genClasses>
+    <genClasses ecoreClass="fogAdlModel.ecore#//MultiplicityExpression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fogAdlModel.ecore#//MultiplicityExpression/multiplicityOperator"/>
+    </genClasses>
+    <genClasses ecoreClass="fogAdlModel.ecore#//Connector">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//Connector/targetServices"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//Connector/sourceServices"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//Connector/instanceOf"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//Connector/application"/>
+    </genClasses>
+    <genClasses ecoreClass="fogAdlModel.ecore#//ConnectorType">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//ConnectorType/targetServices"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//ConnectorType/sourceServices"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//ConnectorType/application"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//ConnectorType/instances"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//ConnectorType/constraints"/>
+    </genClasses>
+    <genClasses ecoreClass="fogAdlModel.ecore#//AttributeType">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//AttributeType/unitofmeasurment"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fogAdlModel.ecore#//AttributeType/valueType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//AttributeType/instances"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//AttributeType/fogsystem"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fogAdlModel.ecore#//AttributeType/resources"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fogAdlModel.ecore#//AttributeType/defaultValue"/>
+    </genClasses>
+    <genClasses ecoreClass="fogAdlModel.ecore#//UnitOfMeasurment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fogAdlModel.ecore#//UnitOfMeasurment/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fogAdlModel.ecore#//UnitOfMeasurment/conversionToMainUnit"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//UnitOfMeasurment/fogsystem"/>
+    </genClasses>
+    <genClasses ecoreClass="fogAdlModel.ecore#//Attribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fogAdlModel.ecore#//Attribute/value"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//Attribute/unitofmeasurment"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//Attribute/instanceOf"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fogAdlModel.ecore#//Attribute/fogresource"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

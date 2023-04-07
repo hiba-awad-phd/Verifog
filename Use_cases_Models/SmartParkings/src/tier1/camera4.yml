@@ -1,0 +1,26 @@
+ApiVersion:v.0.1
+resourceType: PhysicalNode
+metadata:
+  id: camera4
+  tags:
+  - location: z2
+  - responseTime: fast
+  - capacity: veryLow
+  - detection_quality: moderate
+Spec: 
+  
+  physicalResources:
+    networkLinks :
+      downloadLink:
+      uploadLink:
+      //micro2
+ - metadata : 
+          id : L153647
+          tags: 
+          
+      Spec:
+        constraints:
+          - networkClass: Wifi
+        networks:
+        sourceNetworks: 
+        - net4

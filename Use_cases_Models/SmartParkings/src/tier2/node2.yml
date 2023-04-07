@@ -1,0 +1,47 @@
+ApiVersion:v.0.1
+resourceType: VirtualNode
+metadata:
+  id: Fognode2
+  tags:
+  - responseTime: fast
+  - capacity: moderate
+  - location: North
+Spec:
+  image: im2
+  imageRegistry: gitlab.com
+  physicalResources: 
+    networkLinks :
+      downloadLink :
+      //proxy
+ - metadata : 
+          id : L454587
+          tags:      
+      Spec:
+        constraints:
+          - networkClass: Wifi
+        networks:
+        sourceNetworks: 
+        - netallnodes
+      //micro2
+           - metadata : 
+          id : L569874
+          tags: 
+          
+      Spec:
+        constraints:
+          - networkClass: Wifi
+        networks:
+        sourceNetworks: 
+        - netc2n
+      uploadLink:
+      //proxy
+      - metadata : 
+          id : L222598
+          tags: 
+          
+      Spec:
+        constraints:
+          - networkClass: Wifi
+        networks:
+        sourceNetworks: 
+        - netpn

@@ -1,0 +1,100 @@
+ApiVersion:v.0.1
+resourceType: VirtualNode
+metadata:
+
+  id: Fognode11
+  tags: - securityLocation: High
+   - impact: A
+
+
+Spec:
+  image: im0
+  imageRegistry: gitlab.com
+  physicalResources: 
+    networkLinks :
+      downloadLink :
+      //BD allocator
+        - metadata : 
+         
+          id : L080910
+          tags: 
+          - security : High 
+          - decryption: onlybyKey
+          
+      Spec:
+        constraints:
+          - networkClass: Wifi
+        networks:
+        sourceNetworks: 
+        - MyNetwork1
+      //cloud1
+      - metadata : 
+        
+          id : L38391
+          tags: 
+          - security : High 
+         - decryption: onlybyKey
+     
+      Spec:
+        constraints:
+          - networkClass: Ethernet
+        networks:
+        sourceNetworks: 
+        - Internet
+      uploadLink:
+      //datagathered
+      - metadata :
+        
+          id : L36375
+          tags: 
+          - security : High 
+          - encryption: obligated
+          Spec:
+            constraints:
+            - networkClass: Ethernet
+            networks:
+              sourceNetworks: 
+              - Internet
+         // to be verified     
+//        - metadata:
+//        
+//          id: L87654 
+//          tags:
+//          - security: High
+//          - encryption: obligated
+//          Spec:
+//            constraints:
+//            - bandwidh:
+//              Equal: 100
+//            networks:
+//              targetNetworks:
+//              - MyNetwork1        
+  
+        //admin1
+        - metadata : 
+      
+          id : L080911
+          tags: 
+          - security : High 
+          - encryption: obligated
+      Spec:
+        constraints:
+          - networkClass: Wifi
+        networks:
+        sourceNetworks: 
+        - MyNetwork001
+        //admin2
+        - metadata : 
+     
+          id : L080915
+          tags: 
+          - security : High 
+          - encryption: obligated
+      Spec:
+        constraints:
+          - networkClass: Wifi
+        networks:
+        sourceNetworks: 
+        - MyNetwork02
+
+  

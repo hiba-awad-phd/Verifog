@@ -1,0 +1,30 @@
+ApiVersion:v.0.1
+resourceType: PhysicalNode
+metadata:
+  //alias: iot2
+  id: admin122
+ // fogArea: 
+  tags: 
+  - Place: hospital
+  - securityLocation: moderate
+  - impact: B
+
+
+Spec:
+   physicalResources:
+   
+     networkLinks:
+       downloadLink:  
+         -metadata:
+         //  alias: eth02
+           id: L667217
+           tags:
+             - security: moderate
+            
+          Spec:
+            constraints:
+            - networkClass: Wifi
+            networks:
+              sourceNetworks: 
+              - MyNetwork02
+           uploadLink:

@@ -1,0 +1,40 @@
+ApiVersion:v.0.1
+resourceType: VirtualNode
+metadata:
+//  alias: capteurg
+  id: Fognode3 //glucose topologie
+  tags: 
+  - securityLocation: High
+  - impact: A
+Spec:
+  image: glucoseimage
+  imageRegistry: gitlab.com
+  physicalResources: 
+    networkLinks :
+      downloadLink :
+             - metadata : 
+      //    alias: eth05
+          id : L123450
+          tags: 
+          - security : High 
+          - decryption: onlybyKey
+              Spec:
+        constraints:
+          - networkClass: Wifi
+        networks:
+        sourceNetworks: 
+        - MyNetwork144  
+      uploadLink:
+      //GE
+        - metadata : 
+       //   alias: eth03
+          id : L151504
+          tags: 
+          - security : High 
+          - decryption: onlybyKey
+      Spec:
+        constraints:
+          - networkClass: Wifi
+        networks:
+        sourceNetworks: 
+        - MyNetwork03

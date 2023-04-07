@@ -1,0 +1,12 @@
+ApiVersion:v.0.1
+resourceType:VirtualNode
+metadata:
+id: glucoseconf
+tags:
+instanceOf:glucosenode3
+status:
+hostedOn:glucoseconf
+hosts:
+timeleft: 23
+intrusionDetection: 13
+authorityLevelChecking: 5

@@ -1,0 +1,12 @@
+ApiVersion:v.0.1
+resourceType: VirtualNode
+metadata:
+id: smphon
+tags:
+instanceOf:smartphone
+status:
+hostedOn:smphon
+hosts:
+energy_consumption: 120
+available_energy:43
+green_consumption:115

@@ -1,0 +1,12 @@
+ApiVersion:v.0.1
+resourceType:VirtualNode
+metadata:
+id: fogconf1
+tags:
+instanceOf:Fognode11
+status:
+hostedOn: fogconf1
+hosts:
+timeleft: 11
+intrusionDetection: 78
+authorityLevelChecking: 5

@@ -1,0 +1,6 @@
+ApiVersion:v.0.1
+resourceType:Attribute
+name: 'energy_consumption'
+type: 'float'
+
+//unitOfMeasurment: - kWh

@@ -1,0 +1,11 @@
+ApiVersion:v.0.1
+resourceType:VirtualNode
+metadata:
+id: bpconf
+tags:
+instanceOf:bloodPnode2
+status:
+hostedOn: bpconf
+hosts:
+
+authorityLevelChecking: 4

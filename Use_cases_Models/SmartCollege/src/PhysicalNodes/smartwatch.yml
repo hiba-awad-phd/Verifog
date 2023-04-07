@@ -1,0 +1,15 @@
+ApiVersion:v.0.1
+resourceType:PhysicalNode
+metadata:
+id: smartwatch
+tags: 
+
+  - greenEnergy: moderate
+
+  - SourceEnergy: renewable
+  Spec:
+  physicalResources:
+  networkLinks:
+  downloadLink:
+  
+  uploadLink:

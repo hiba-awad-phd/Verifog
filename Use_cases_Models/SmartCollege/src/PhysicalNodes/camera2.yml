@@ -1,0 +1,15 @@
+ApiVersion:v.0.1
+resourceType:PhysicalNode
+metadata:
+id: camera2
+tags: 
+
+  - greenEnergy: low
+
+  - SourceEnergy: Petroleum
+  Spec:
+  physicalResources:
+  networkLinks:
+  downloadLink:
+  
+  uploadLink:

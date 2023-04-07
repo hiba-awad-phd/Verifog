@@ -1,0 +1,11 @@
+ApiVersion:v.0.1
+resourceType: VirtualNode
+metadata:
+id: Cloudconfig1 //hopital
+tags:
+instanceOf:datacenter
+status:
+hostedOn:Cloudconfig1
+hosts:
+
+authorityLevelChecking: 5

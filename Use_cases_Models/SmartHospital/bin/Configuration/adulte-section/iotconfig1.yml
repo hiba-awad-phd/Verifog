@@ -1,0 +1,11 @@
+ApiVersion:v.0.1
+resourceType: VirtualNode
+metadata:
+id: iotconfig1
+tags:
+instanceOf:admin1
+status:
+hostedOn:iotconfig1
+hosts:
+
+authorityLevelChecking: 1

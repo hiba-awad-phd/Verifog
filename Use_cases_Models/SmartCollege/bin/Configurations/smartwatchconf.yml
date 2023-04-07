@@ -1,0 +1,12 @@
+ApiVersion:v.0.1
+resourceType: VirtualNode
+metadata:
+id: smartw
+tags:
+instanceOf:smartwatch
+status:
+hostedOn:smartw
+hosts:
+energy_consumption: 80
+available_energy:43
+green_consumption:77

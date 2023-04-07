@@ -1,0 +1,12 @@
+ApiVersion:v.0.1
+resourceType: VirtualNode
+metadata:
+id: fogconfig //cloud
+tags:
+instanceOf:Fognode1
+status:
+hostedOn:fogconfig
+hosts:
+
+
+authorityLevelChecking: 4

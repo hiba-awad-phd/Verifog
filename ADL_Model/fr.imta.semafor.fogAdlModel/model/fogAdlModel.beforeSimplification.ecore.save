@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="fogAdlModel" nsURI="http://www.example.org/fogAdlModel" nsPrefix="fogAdlModel">
+  <eClassifiers xsi:type="ecore:EClass" name="FogResource">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="alias" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tags" upperBound="-1" eType="#//Tag"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NodeType" eSuperTypes="#//FogResource">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fogsystem" eType="#//FogSystem"
+        eOpposite="#//FogSystem/physicalnodespecification"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cpuCoresRequirement" upperBound="-1"
+        eType="#//Constraint" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="memoryRequirement" upperBound="-1"
+        eType="#//Constraint" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="diskStorageRequirement"
+        upperBound="-1" eType="#//Constraint" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="runtimes" upperBound="-1"
+        eType="#//Constraint" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="instances" upperBound="-1"
+        eType="#//Node" eOpposite="#//Node/isInstanceOf"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="downloadLink" upperBound="-1"
+        eType="#//NetworkLinkType" containment="true" eOpposite="#//NetworkLinkType/sourceNode"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="uploadLink" upperBound="-1"
+        eType="#//NetworkLinkType" containment="true" eOpposite="#//NetworkLinkType/targetNode"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FogSystem">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="physicalnodespecification"
+        upperBound="-1" eType="#//NodeType" containment="true" eOpposite="#//NodeType/fogsystem"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="networktypes" upperBound="-1"
+        eType="#//NetworkType" containment="true" eOpposite="#//NetworkType/fogsystem"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="networks" upperBound="-1"
+        eType="#//Network" containment="true" eOpposite="#//Network/fogsystem"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="applications" upperBound="-1"
+        eType="#//Application" eOpposite="#//Application/fogSystem"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fogareas" upperBound="-1"
+        eType="#//FogArea" containment="true" eOpposite="#//FogArea/fogsystem"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Tag">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Constraint">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operator" eType="#//ComparaisonOperator"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expression" lowerBound="2"
+        upperBound="2" eType="#//Expression" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PhysicalNodeSpecification" eSuperTypes="#//NodeType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VirtualNodeSpecification" eSuperTypes="#//NodeType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="imageName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="imageRegistry" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="replicas" upperBound="-1"
+        eType="#//Constraint" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hosts" upperBound="-1"
+        eType="#//ServiceType" eOpposite="#//ServiceType/hostedOn"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Expression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="IntegerValueExpression" eSuperTypes="#//Expression">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttributeExpression" eSuperTypes="#//Expression">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="attributeName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ComparaisonOperator">
+    <eLiterals name="Equal" value="2"/>
+    <eLiterals name="LesserOrEqual" value="3"/>
+    <eLiterals name="GreaterOrEqual" value="4"/>
+    <eLiterals name="Greater" value="3"/>
+    <eLiterals name="Lesser" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CustomExpression" eSuperTypes="#//Expression">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="expression" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Node" eSuperTypes="#//FogResource">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isInstanceOf" eType="#//NodeType"
+        eOpposite="#//NodeType/instances"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cpuArchitecture" eType="#//CPUArchitecture"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="OperatingSystem" eType="#//OperatingSystem"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="runtimes" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EByteArray"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="healthStatus" eType="#//HealthStatus"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hostedVirtualNodes" upperBound="-1"
+        eType="#//VirtualNode" eOpposite="#//VirtualNode/hostingNode"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="CPUCores" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="memory" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="diskStorage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="referenceToVirtualNodeType"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="uploadLink" upperBound="-1"
+        eType="#//NetworkLink" containment="true" eOpposite="#//NetworkLink/sourceNode"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="downloadLink" upperBound="-1"
+        eType="#//NetworkLink" containment="true" eOpposite="#//NetworkLink/targetNode"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fogarea" lowerBound="1"
+        eType="#//FogArea" eOpposite="#//FogArea/nodes"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="CPUArchitecture">
+    <eLiterals name="Intel"/>
+    <eLiterals name="ARM" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="OperatingSystem">
+    <eLiterals name="Linux"/>
+    <eLiterals name="MacOS" value="1"/>
+    <eLiterals name="Windows" value="2"/>
+    <eLiterals name="Android" value="3"/>
+    <eLiterals name="IOS" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VirtualNode" eSuperTypes="#//Node">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hostingNode" eType="#//Node"
+        eOpposite="#//Node/hostedVirtualNodes"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PhysicalNode" eSuperTypes="#//Node"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="HealthStatus">
+    <eLiterals name="UP"/>
+    <eLiterals name="DOWN" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NetworkType" eSuperTypes="#//FogResource">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fogsystem" eType="#//FogSystem"
+        eOpposite="#//FogSystem/networktypes"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="downloadlinks" upperBound="-1"
+        eType="#//NetworkLinkType" containment="true" eOpposite="#//NetworkLinkType/targetNetwork"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ipRange" upperBound="-1"
+        eType="#//Constraint" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bandwidthRequirement" upperBound="-1"
+        eType="#//Constraint" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="networkClass" eType="#//Constraint"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="instances" upperBound="-1"
+        eType="#//Network" eOpposite="#//Network/isInstanceOf"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="uploadLink" upperBound="-1"
+        eType="#//NetworkLinkType" containment="true" eOpposite="#//NetworkLinkType/sourceNetworks"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NetworkLinkType" eSuperTypes="#//FogResource">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targetNetwork" eType="#//NetworkType"
+        eOpposite="#//NetworkType/downloadlinks"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sourceNode" eType="#//NodeType"
+        eOpposite="#//NodeType/downloadLink"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targetNode" eType="#//NodeType"
+        eOpposite="#//NodeType/uploadLink"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ipRange" upperBound="-1"
+        eType="#//Constraint" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="instances" upperBound="-1"
+        eType="#//NetworkLink" eOpposite="#//NetworkLink/isInstanceOf"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sourceNetworks" eType="#//NetworkType"
+        eOpposite="#//NetworkType/uploadLink"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="NetworkClass">
+    <eLiterals name="Ethernet" value="1"/>
+    <eLiterals name="Wifi" value="2"/>
+    <eLiterals name="Bluetooth" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NetworkClassExpression" eSuperTypes="#//Expression">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//NetworkClass"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Network" eSuperTypes="#//FogResource">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fogsystem" eType="#//FogSystem"
+        eOpposite="#//FogSystem/networks"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="downloadLinks" upperBound="-1"
+        eType="#//NetworkLink" eOpposite="#//NetworkLink/targetNetwork"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isInstanceOf" eType="#//NetworkType"
+        eOpposite="#//NetworkType/instances"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="uploadlinks" upperBound="-1"
+        eType="#//NetworkLink" eOpposite="#//NetworkLink/sourceNetworks"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NetworkLink" eSuperTypes="#//FogResource">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targetNetwork" eType="#//Network"
+        eOpposite="#//Network/downloadLinks"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sourceNode" eType="#//Node"
+        eOpposite="#//Node/uploadLink"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targetNode" eType="#//Node"
+        eOpposite="#//Node/downloadLink"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isInstanceOf" eType="#//NetworkLinkType"
+        eOpposite="#//NetworkLinkType/instances"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sourceIpAddress" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="targetIpAddress" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bitrate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sourceNetworks" upperBound="-1"
+        eType="#//Network" eOpposite="#//Network/uploadlinks"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Application" eSuperTypes="#//FogResource">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fogSystem" eType="#//FogSystem"
+        eOpposite="#//FogSystem/applications"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="serviceSpecifications"
+        upperBound="-1" eType="#//ServiceType" containment="true" eOpposite="#//ServiceType/application"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ServiceType" eSuperTypes="#//FogResource">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="application" eType="#//Application"
+        eOpposite="#//Application/serviceSpecifications"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hostedOn" upperBound="-1"
+        eType="#//VirtualNodeSpecification" eOpposite="#//VirtualNodeSpecification/hosts"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="implementedBy" upperBound="-1"
+        eType="#//Software" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="openPorts" upperBound="-1"
+        eType="#//NetworkPort" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="referenceToExecutionEnvironment"
+        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Software">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="executionRequirements"
+        upperBound="-1" eType="#//NodeType" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="installStartCommand" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="referenceToExecutionEnvironment"
+        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NetworkPort">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="protocol" eType="#//TransportProtocol"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="portNumber" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="TransportProtocol">
+    <eLiterals name="TCP"/>
+    <eLiterals name="UDP" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FogArea">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fogsystem" lowerBound="1"
+        eType="#//FogSystem" eOpposite="#//FogSystem/fogareas"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nodes" upperBound="-1"
+        eType="#//Node" containment="true" eOpposite="#//Node/fogarea"/>
+  </eClassifiers>
+</ecore:EPackage>

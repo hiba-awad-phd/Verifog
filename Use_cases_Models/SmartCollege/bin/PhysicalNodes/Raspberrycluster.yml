@@ -1,0 +1,15 @@
+ApiVersion:v.0.1
+resourceType:PhysicalNode
+metadata:
+id: rasp
+tags: 
+
+  - greenEnergy: High
+
+  - SourceEnergy: renewable
+  Spec:
+  physicalResources:
+  networkLinks:
+  downloadLink:
+  
+  uploadLink:

@@ -1,0 +1,30 @@
+ApiVersion:v.0.1
+resourceType: PhysicalNode
+metadata:
+ // alias: hospdata
+  id: hospdata
+  tags: 
+  - securityLocation: veryHigh
+  - accessibility: Private
+  - authentication: on
+  - impact: A
+
+  Spec:
+  physicalResources:
+  networkLinks:
+  downloadLink:
+  
+  uploadLink:
+//  //to web
+//  - metadata :
+//      //    alias: eth46
+//          id : L36369
+//          tags: 
+//          - security : High 
+//          - encryption: obligated
+//          Spec:
+//            constraints:
+//            - networkClass: Wifi
+//            networks:
+//              sourceNetworks: 
+//              - Internet  

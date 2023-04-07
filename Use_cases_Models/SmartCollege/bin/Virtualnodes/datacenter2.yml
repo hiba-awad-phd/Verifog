@@ -1,0 +1,18 @@
+ApiVersion:v.0.1
+resourceType:VirtualNode
+metadata:
+id: datacenter2
+tags: 
+
+  - greenEnergy: veryHigh
+
+  - SourceEnergy: renewable
+  Spec:
+
+ image: imag
+ imageRegistry:github.com
+  physicalResources:
+  networkLinks:
+  downloadLink:
+  
+  uploadLink:

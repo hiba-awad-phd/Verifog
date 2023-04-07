@@ -1,0 +1,12 @@
+ApiVersion:v.0.1
+resourceType: VirtualNode
+metadata:
+id: pcconf
+tags:
+instanceOf:pc
+status:
+hostedOn:pcconf
+hosts:
+energy_consumption: 56
+available_energy:56
+green_consumption:56

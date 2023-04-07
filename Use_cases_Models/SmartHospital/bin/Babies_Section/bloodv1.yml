@@ -1,0 +1,47 @@
+ApiVersion:v.0.1
+resourceType: VirtualNode
+metadata:
+//  alias: myvm2
+  id: bloodPnode2
+  tags: -securityLocation: veryHigh
+  - impact: A
+
+//    instanceOf: BandwidthNode1
+//status:
+//  hostedOn: BloodEvent1
+//  hosts:
+//    -bloodPnode2
+Spec:
+  image: bloodimage
+  imageRegistry: gitlab.com
+  physicalResources: 
+    networkLinks :
+      downloadLink :
+       
+       - metadata : 
+      //    alias: eth05
+          id : L123453
+          tags: 
+          - security : High 
+          - decryption: onlybyKey
+              Spec:
+        constraints:
+          - networkClass: Wifi
+        networks:
+        sourceNetworks: 
+        - MyNetwork453
+      uploadLink:
+        //BE
+        - metadata : 
+      //    alias: eth04
+          id : L080913
+          tags: 
+          - security : High 
+           - decryption: onlybyKey
+      Spec:
+        constraints:
+          - networkClass: Wifi
+        networks:
+        sourceNetworks: 
+        - MyNetwork04
+        

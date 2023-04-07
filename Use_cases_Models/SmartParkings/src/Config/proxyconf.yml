@@ -1,0 +1,9 @@
+ApiVersion:v.0.1
+resourceType: VirtualNode
+metadata:
+id: prox
+tags:
+instanceOf:pro
+status:
+hostedOn:prox
+hosts:

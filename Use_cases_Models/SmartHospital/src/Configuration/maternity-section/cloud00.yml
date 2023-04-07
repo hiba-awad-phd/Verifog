@@ -1,0 +1,12 @@
+ApiVersion:v.0.1
+resourceType:VirtualNode
+metadata:
+id: cloud00
+tags:
+instanceOf:datacenter2
+status:
+hostedOn: cloud00
+hosts:
+timeleft: 208
+intrusionDetection: 84
+authorityLevelChecking: 3

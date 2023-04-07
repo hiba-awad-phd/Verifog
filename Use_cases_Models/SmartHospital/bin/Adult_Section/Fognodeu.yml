@@ -1,0 +1,212 @@
+ApiVersion:v.0.1
+resourceType: VirtualNode
+metadata:
+
+  id: Fognode1
+  tags: - securityLocation: High
+   - impact: A
+
+
+//  instanceOf: BandwidthNode
+//  status:
+//  hostedOn:fog
+//  hosts:-Fognode1
+Spec:
+  image: im0
+  imageRegistry: gitlab.com
+  physicalResources: 
+    networkLinks :
+      downloadLink :
+      //BD allocator
+        - metadata : 
+         
+          id : L151501
+          tags: 
+          - security : High 
+          - decryption: onlybyKey
+          
+      Spec:
+        constraints:
+          - networkClass: Wifi
+        networks:
+        sourceNetworks: 
+        - MyNetwork1
+      //cloud1
+      - metadata : 
+        
+          id : L36369
+          tags: 
+          - security : High 
+         - decryption: onlybyKey
+     
+      Spec:
+        constraints:
+          - networkClass: Ethernet
+        networks:
+        sourceNetworks: 
+        - Internet
+      uploadLink:
+      //datagathered
+      - metadata :
+        
+          id : L36377
+          tags: 
+          - security : High 
+          - encryption: obligated
+          Spec:
+            constraints:
+            - networkClass: Ethernet
+            networks:
+              sourceNetworks: 
+              - Internet
+         // to be verified     
+//        - metadata:
+//        
+//          id: L87654 
+//          tags:
+//          - security: High
+//          - encryption: obligated
+//          Spec:
+//            constraints:
+//            - bandwidh:
+//              Equal: 100
+//            networks:
+//              targetNetworks:
+//              - MyNetwork1        
+  
+        //admin1
+        - metadata : 
+      
+          id : L151502
+          tags: 
+          - security : High 
+          - encryption: obligated
+      Spec:
+        constraints:
+          - networkClass: Wifi
+        networks:
+        sourceNetworks: 
+        - MyNetwork001
+        //admin2
+        - metadata : 
+     
+          id : L151503
+          tags: 
+          - security : High 
+          - encryption: obligated
+      Spec:
+        constraints:
+          - networkClass: Wifi
+        networks:
+        sourceNetworks: 
+        - MyNetwork02
+//        //GE
+//        - metadata : 
+//          alias: eth03
+//          id : L151504
+//          tags: 
+//          - security : High 
+//      Spec:
+//        constraints:
+//          - networkClass: Wifi
+//        networks:
+//        sourceNetworks: 
+//        - MyNetwork03
+//        //BE
+//        - metadata : 
+//          alias: eth04
+//          id : L151505
+//          tags: 
+//          - security : High 
+//      Spec:
+//        constraints:
+//          - networkClass: Wifi
+//        networks:
+//        sourceNetworks: 
+//        - MyNetwork04
+//        //TE
+//        - metadata : 
+//          alias: eth05
+//          id : L151506
+//          tags: 
+//          - security : High 
+//      Spec:
+//        constraints:
+//          - networkClass: Wifi
+//        networks:
+//        sourceNetworks: 
+//        - MyNetwork05               
+//  
+//variables:
+//  -$Patient_Status
+//  -$Glucose
+//  -$BloodPressure
+//  -$Temperature
+//
+//script: 
+//  - >
+//    if [ $Glucose -gt 90 ] || [ $Glucose -lt 70 ] ; then ${Patient_Status} == "critical" ; 
+//    else 
+//     if [ $Glucose -eq 75 ]; then ${Patient_Status} == "normal" ; 
+//     else
+//     ${Patient_Status} == "less_critical";
+//     fi;
+//     fi
+//     
+//  - >
+//    if [ $Temperature -gt 39 ] || [ $Temperature -lt 35 ]; then ${Patient_Status} == "critical" ; 
+//    else 
+//     if [ $Temperature -eq 37 ]; then ${Patient_Status} == "normal" ; 
+//     else
+//     ${Patient_Status} == "less_critical"
+//     fi;
+//     fi
+//     
+//  - >
+//    if [ $BloodPressure -eq 80 ]; then ${Patient_Status} == "normal" ; 
+//    else
+//     if [ $BloodPressure -gt 90 ] || [ $BloodPressure -le 60 ]; then ${Patient_Status} == "critical"; 
+//     else
+//     ${Patient_Status} == "less_critical"
+//     fi;
+//     fi
+//    
+//   - declare -A Important
+//   - declare -A LessImportant
+//   - declare -A Ordinary
+//     
+//
+//
+//stages:
+//  -critical
+//  -less_critical
+//  -normal
+//  
+//critical-job:
+//  stage: critical
+//  script: 
+//    -"echo Received critical request event"
+//    -"Important+=( ['Glucose','Temperature','BloodPressure'] = ['$Glucose', '$Temperature' ,'$BloodPressure'] )"
+//  rules:
+//    - if: '${Patient_Status} == "critical"'
+//   
+//      
+//less_critical-job:
+//  stage: less_critical
+//    script: 
+//      -"echo Received less critical request event"
+//      -"LessImportant+=( ['Glucose','Temperature','BloodPressure'] = ['$Glucose', '$Temperature' ,'BloodPressure'] )"
+//      
+//    rules:
+//    - if: '${Patient_Status} == "less_critical"'
+//  
+//  
+//normal-job:     
+//   stage: normal
+//   script: 
+//     -"Ordinary+=( ['Glucose','Temperature','BloodPressure'] = ['$Glucose', '$Temperature' ,'BloodPressure'] )"
+//     -"echo Received normal request event"
+//   rules:
+//    - if: '${Patient_Status} == "normal"'
+// 
+  

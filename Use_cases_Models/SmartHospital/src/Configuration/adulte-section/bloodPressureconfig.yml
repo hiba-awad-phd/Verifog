@@ -1,0 +1,12 @@
+ApiVersion:v.0.1
+resourceType: VirtualNode
+metadata:
+id: BPconfig
+tags:
+instanceOf:Fognode2
+status:
+hostedOn:BPconfig
+hosts:
+
+authorityLevelChecking: 3
+

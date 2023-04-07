@@ -1,0 +1,47 @@
+ApiVersion:v.0.1
+resourceType: VirtualNode
+metadata:
+//  alias: myvm2
+  id: Fognode2 //bp
+  tags: -securityLocation: veryHigh
+  - impact: A
+
+
+//   instanceOf: BandwidthNode //Hospital Vm
+//  status:
+//  hostedOn:BloodEvent2 //the physical node that have the current Vm
+//  hosts:
+//  - BandwidthNode
+Spec:
+  image: bloodimage
+  imageRegistry: gitlab.com
+  physicalResources: 
+    networkLinks :
+      downloadLink :
+             - metadata : 
+      //    alias: eth05
+          id : L123451
+          tags: 
+          - security : High 
+          - decryption: onlybyKey
+              Spec:
+        constraints:
+          - networkClass: Wifi
+        networks:
+        sourceNetworks: 
+        - MyNetwork141  
+      uploadLink:
+        //BE
+        - metadata : 
+      //    alias: eth04
+          id : L151505
+          tags: 
+          - security : High 
+           - decryption: onlybyKey
+      Spec:
+        constraints:
+          - networkClass: Wifi
+        networks:
+        sourceNetworks: 
+        - MyNetwork04
+        

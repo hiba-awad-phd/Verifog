@@ -1,0 +1,11 @@
+ApiVersion:v.0.1
+resourceType:VirtualNode
+metadata:
+id: bandconf0
+tags:
+instanceOf:BandwidthNode
+status:
+hostedOn: bandconf0
+hosts:
+
+authorityLevelChecking: 1

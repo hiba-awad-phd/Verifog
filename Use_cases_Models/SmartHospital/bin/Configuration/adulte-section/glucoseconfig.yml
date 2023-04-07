@@ -1,0 +1,11 @@
+ApiVersion:v.0.1
+resourceType: VirtualNode
+metadata:
+id: Gconfig
+tags:
+instanceOf:Fognode3
+status:
+hostedOn:Gconfig
+hosts:
+
+authorityLevelChecking: 1

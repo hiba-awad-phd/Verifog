@@ -1,0 +1,12 @@
+ApiVersion:v.0.1
+resourceType:VirtualNode
+metadata:
+id: temperatureconf
+tags:
+instanceOf:tempn
+status:
+hostedOn: temperatureconf
+hosts:
+timeleft: 17
+intrusionDetection: 5
+authorityLevelChecking: 3

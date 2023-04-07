@@ -1,0 +1,42 @@
+ApiVersion:v.0.1
+resourceType: VirtualNode
+metadata:
+//  alias: myvm2
+  id: bloodPn
+  tags: -securityLocation: veryHigh
+  - impact: A
+
+
+Spec:
+  image: bloodimage
+  imageRegistry: gitlab.com
+  physicalResources: 
+    networkLinks :
+         downloadLink :
+       - metadata : 
+      //    alias: eth05
+          id : L123457
+          tags: 
+          - security : High 
+          - decryption: onlybyKey
+              Spec:
+        constraints:
+          - networkClass: Wifi
+        networks:
+        sourceNetworks: 
+        - MyNetwork457
+      uploadLink:
+        //BE
+        - metadata : 
+      //    alias: eth04
+          id : L667205
+          tags: 
+          - security : High 
+           - decryption: onlybyKey
+      Spec:
+        constraints:
+          - networkClass: Wifi
+        networks:
+        sourceNetworks: 
+        - MyNetwork04
+        

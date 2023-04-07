@@ -1,0 +1,12 @@
+ApiVersion:v.0.1
+resourceType: VirtualNode
+metadata:
+id: Raspberry
+tags:
+instanceOf:rasp
+status:
+hostedOn:Raspberry
+hosts:
+energy_consumption: 120
+available_energy:43
+green_consumption:106

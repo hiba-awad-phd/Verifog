@@ -1,0 +1,59 @@
+ApiVersion:v.0.1
+resourceType: VirtualNode
+metadata:
+  id: pro
+  tags:
+  - responseTime: moderate
+  - capacity: High
+  
+Spec: 
+  image: impro
+  imageRegistry: gitlab.com
+  physicalResources:
+    networkLinks :
+      downloadLink:
+      //node1
+             - metadata : 
+          id : L222599
+          tags: 
+          
+      Spec:
+        constraints:
+          - networkClass: Wifi
+        networks:
+        sourceNetworks: 
+        - netnp1
+      //node2
+          - metadata : 
+          id : L222598
+          tags: 
+          
+      Spec:
+        constraints:
+          - networkClass: Wifi
+        networks:
+        sourceNetworks: 
+        - netpn2
+      uploadLink:
+      //cloud
+             - metadata : 
+          id : L222555
+          tags: 
+          
+      Spec:
+        constraints:
+          - networkClass: Wifi
+        networks:
+        sourceNetworks: 
+        - netPC
+        //nodes
+                  - metadata : 
+          id : L454587
+          tags: 
+          
+      Spec:
+        constraints:
+          - networkClass: Wifi
+        networks:
+        sourceNetworks: 
+        - netallnodes

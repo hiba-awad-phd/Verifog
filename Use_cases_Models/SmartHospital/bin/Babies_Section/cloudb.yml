@@ -1,0 +1,56 @@
+ApiVersion: v.0.1
+resourceType: PhysicalNode
+metadata:
+//alias: datacenter
+id: datacenter1
+tags:
+  - securityLocation: High
+  - impact: A
+
+Spec: 
+  physicalResources:
+    operatingSystem: 'Linux'
+    totalCost: 
+      Lesser: 1
+    networkLinks :
+      downloadLink:
+      //fognodedata
+      - metadata :
+         // alias: eth77
+          id : L36375
+          tags: 
+          - security : High 
+           - decryption: onlybyKey
+          Spec:
+            constraints:
+            - networkClass: Ethernet
+            networks:
+              sourceNetworks: 
+              - Internet
+      uploadLink :
+        - metadata :
+        //  alias: eth9
+          id : L38391
+          tags: 
+          - security : High 
+          - encryption: obligated
+          Spec:
+            constraints:
+            - networkClass: Ethernet
+            networks:
+              sourceNetworks: 
+              - Internet
+//hospital
+     
+      - metadata :
+       //   alias: eth45
+          id : L36346
+          tags: 
+          - security : High 
+           - encryption: obligated
+          Spec:
+            constraints:
+            - networkClass: Ethernet
+            networks:
+              sourceNetworks: 
+              - Internet

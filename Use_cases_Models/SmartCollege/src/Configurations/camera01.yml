@@ -1,0 +1,12 @@
+ApiVersion:v.0.1
+resourceType: VirtualNode
+metadata:
+id: cameracon1
+tags:
+instanceOf:camera1
+status:
+hostedOn:cameracon1
+hosts:
+energy_consumption: 55
+available_energy:43
+green_consumption:50

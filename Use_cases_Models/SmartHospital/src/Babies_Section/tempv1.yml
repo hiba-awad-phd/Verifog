@@ -1,0 +1,44 @@
+ApiVersion:v.0.1
+resourceType: VirtualNode
+metadata:
+//  alias: capteurt
+  id: tempnode4
+  tags: 
+  - securityLocation: High
+  - impact: A    
+
+Spec:
+    image: tempimage
+    imageRegistry: gitlab.com
+  physicalResources: 
+    networkLinks :
+      downloadLink :
+         
+       - metadata : 
+      //    alias: eth05
+          id : L123455
+          tags: 
+          - security : High 
+          - decryption: onlybyKey
+              Spec:
+        constraints:
+          - networkClass: Wifi
+        networks:
+        sourceNetworks: 
+        - MyNetwork554
+      uploadLink:
+        //TE
+        - metadata : 
+      //    alias: eth05
+          id : L080914
+          tags: 
+          - security : High 
+          - decryption: onlybyKey
+          
+      Spec:
+        constraints:
+          - networkClass: Wifi
+        networks:
+        sourceNetworks: 
+        - MyNetwork05               
+        

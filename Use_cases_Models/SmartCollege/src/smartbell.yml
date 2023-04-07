@@ -1,0 +1,98 @@
+ApiVersion:v.0.1
+resourceType:Application
+metadata:
+  id: smartBell
+  tags:
+    -region: FR
+Spec:
+  services:
+    -FeatureExtraction:
+      metadata:
+  		
+ 	    id: S1 
+ 	    tags: 
+ 	    -Place: fog
+ 	    - region: Paris
+	  Spec:
+	    networkPorts:
+	      -'Event':
+          protocol: TCP
+          portNumber: 67896
+          hostPort: 4578
+       hostedOn:
+       virtualNodes:
+       -  S1
+        softwarePacakge:
+        - phpCode:
+         command: 'curl myrepo.com/S1.php; php start S1.php '
+        constraints:
+        	      
+    -BellRinging:
+      metadata: 
+     
+        id: S6
+        tags: 
+          -Place: fog
+          -region: Nanterre
+      Spec:
+        networkPorts:
+        -'Event':
+        protocol: TCP
+        portNumber:6897
+        hostPort: 6598
+       
+       hostedOn:
+       virtualNodes:
+       - S6
+        softwarePacakge:
+        - phpCode:
+         command: 'curl myrepo.com/S6.php; php start S6.php '
+        constraints: 
+         
+    -Gesture_facial_recognition:
+        metadata: 
+    
+        id: S4
+        tags: 
+          -Place: cloud
+          -region: Nanterre
+      Spec:
+        networkPorts:
+        -'Event':
+        protocol: TCP
+        portNumber:8797
+        hostPort: 9623
+        -'sensor':
+        protocol: TCP
+        portNumber: 8964
+        hostPort: 6578
+       hostedOn:
+       virtualNodes:
+       - S4
+        softwarePacakge:
+        - phpCode:
+         command: 'curl myrepo.com/S4.php; php start S4.php '
+        constraints: 
+    -Visitor_habits_analysis:
+        metadata: 
+     
+        id: S7
+        tags: 
+          -Place: cloud
+          -region: Nanterre
+      Spec:
+        networkPorts:
+        -'sensor':
+        protocol: TCP
+        portNumber: 6589
+        hostPort: 3236
+       hostedOn:
+       virtualNodes:
+       - S7
+        softwarePacakge:
+        - phpCode:
+         command: 'curl myrepo.com/S7.php; php start S7.php '
+        constraints:
+connectors:
+   
+        

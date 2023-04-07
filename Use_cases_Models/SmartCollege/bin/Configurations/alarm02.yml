@@ -1,0 +1,12 @@
+ApiVersion:v.0.1
+resourceType: VirtualNode
+metadata:
+id: alarmconf2
+tags:
+instanceOf:alarm2
+status:
+hostedOn:alarmconf2
+hosts:
+energy_consumption: 60
+available_energy:52
+green_consumption:50

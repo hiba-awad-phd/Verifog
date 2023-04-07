@@ -1,0 +1,12 @@
+ApiVersion:v.0.1
+resourceType:VirtualNode
+metadata:
+id: banconf00
+tags:
+instanceOf:BandwidthNode2
+status:
+hostedOn:banconf00
+hosts:
+timeleft: 9
+intrusionDetection: 7
+authorityLevelChecking: 5

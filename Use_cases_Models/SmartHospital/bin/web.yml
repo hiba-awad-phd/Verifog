@@ -1,0 +1,70 @@
+ApiVersion:v.0.1
+resourceType: VirtualNode
+metadata:
+
+  id: website
+  tags:
+- securityLocation: low
+- accessibility: Public
+- authentication: on
+- impact: C
+
+  Spec:
+  image: kub
+imageRegistry: gitlab.com
+  physicalResources:
+  networkLinks:
+  downloadLink:
+  //adult section
+  - metadata :
+       //   alias: eth45
+          id : L36345
+          tags: 
+          - security : High 
+           - decryption: onlybyKey
+          Spec:
+            constraints:
+            - networkClass: Ethernet
+            networks:
+              sourceNetworks: 
+              - Internet
+    // babies section
+      - metadata :
+       //   alias: eth45
+          id : L36346
+          tags: 
+          - security : High 
+           - decryption: onlybyKey
+          Spec:
+            constraints:
+            - networkClass: Ethernet
+            networks:
+              sourceNetworks: 
+              - Internet
+     //maternity section
+       - metadata :
+       //   alias: eth45
+          id : L36347
+          tags: 
+          - security : High 
+           - decryption: onlybyKey
+          Spec:
+            constraints:
+            - networkClass: Ethernet
+            networks:
+              sourceNetworks: 
+              - Internet
+  uploadLink:
+//  //to web
+//  - metadata :
+//      //    alias: eth46
+//          id : L36369
+//          tags: 
+//          - security : High 
+//          - encryption: obligated
+//          Spec:
+//            constraints:
+//            - networkClass: Wifi
+//            networks:
+//              sourceNetworks: 
+//              - Internet  

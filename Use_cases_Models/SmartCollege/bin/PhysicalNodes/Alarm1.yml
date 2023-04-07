@@ -1,0 +1,15 @@
+ApiVersion:v.0.1
+resourceType:PhysicalNode
+metadata:
+id: alarm1
+tags: 
+
+  - greenEnergy: low
+
+  - SourceEnergy: Oil
+  Spec:
+  physicalResources:
+  networkLinks:
+  downloadLink:
+  
+  uploadLink:

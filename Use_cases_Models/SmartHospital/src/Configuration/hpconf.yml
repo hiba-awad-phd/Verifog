@@ -1,0 +1,12 @@
+ApiVersion:v.0.1
+resourceType:VirtualNode
+metadata:
+id: hpconf
+tags:
+instanceOf:website
+status:
+hostedOn: hpconf
+hosts:
+timeleft: 20
+intrusionDetection: 7
+authorityLevelChecking: 1

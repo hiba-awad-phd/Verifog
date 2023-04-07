@@ -1,0 +1,12 @@
+ApiVersion:v.0.1
+resourceType:VirtualNode
+metadata:
+id: hopconfiguration
+tags:
+instanceOf:website
+status:
+hostedOn:hopconfiguration
+hosts:
+timeleft: 20
+intrusionDetection: 8
+authorityLevelChecking: 255

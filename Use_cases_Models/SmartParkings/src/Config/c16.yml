@@ -1,0 +1,11 @@
+ApiVersion:v.0.1
+resourceType: VirtualNode
+metadata:
+id: c16
+tags:
+instanceOf:camera16
+status:
+hostedOn:c16
+hosts:
+image_quality: 6
+detected_cars:16

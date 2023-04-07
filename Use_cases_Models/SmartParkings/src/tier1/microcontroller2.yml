@@ -1,0 +1,151 @@
+ApiVersion:v.0.1
+resourceType: VirtualNode
+metadata:
+  id: micro2
+  tags:
+  - location: tier1
+  - responseTime: fast
+  - capacity: High
+  
+Spec: 
+  image: imicro0
+  imageRegistry: gitlab.com
+  physicalResources:
+    networkLinks :
+      downloadLink:
+      //camera4
+      - metadata : 
+          id : L153647
+          tags: 
+          
+      Spec:
+        constraints:
+          - networkClass: Wifi
+        networks:
+        sourceNetworks: 
+        - net4c
+             //camera14
+      - metadata : 
+          id : L253677
+          tags: 
+          
+      Spec:
+        constraints:
+          - networkClass: Wifi
+        networks:
+        sourceNetworks: 
+        - net14
+        //
+              //camera16
+      - metadata : 
+          id : L256647
+          tags: 
+          
+      Spec:
+        constraints:
+          - networkClass: Wifi
+        networks:
+        sourceNetworks: 
+        - net16
+              //camera15
+      - metadata : 
+          id : L253658
+          tags: 
+          
+      Spec:
+        constraints:
+          - networkClass: Wifi
+        networks:
+        sourceNetworks: 
+        - net15
+        //camera3
+                - metadata : 
+          id : L253649
+          tags: 
+          
+      Spec:
+        constraints:
+          - networkClass: Wifi
+        networks:
+        sourceNetworks: 
+        - net3c
+             //camera2
+       - metadata : 
+          id : L253648
+          tags: 
+          
+      Spec:
+        constraints:
+          - networkClass: Wifi
+        networks:
+        sourceNetworks: 
+        - net2c
+      
+      //camera5
+   - metadata : 
+          id : L153648
+          tags: 
+          
+      Spec:
+        constraints:
+          - networkClass: Wifi
+        networks:
+        sourceNetworks: 
+        - net5   
+      //camera6
+          - metadata : 
+          id : L153649
+          tags: 
+          
+      Spec:
+        constraints:
+          - networkClass: Wifi
+        networks:
+        sourceNetworks: 
+        - net6c
+        //camera8
+          - metadata : 
+          id : L253847
+          tags: 
+          
+      Spec:
+        constraints:
+          - networkClass: Wifi
+        networks:
+        sourceNetworks: 
+        - net8
+        //camera9
+          - metadata : 
+          id : L253649
+          tags: 
+          
+      Spec:
+        constraints:
+          - networkClass: Wifi
+        networks:
+        sourceNetworks: 
+        - net9
+        
+             //camera7
+          - metadata : 
+          id : L256647
+          tags: 
+          
+      Spec:
+        constraints:
+          - networkClass: Wifi
+        networks:
+        sourceNetworks: 
+        - net7
+      uploadLink:
+      //fognode2
+       - metadata : 
+          id : L569874
+          tags: 
+          
+      Spec:
+        constraints:
+          - networkClass: Wifi
+        networks:
+        sourceNetworks: 
+        - netc2

@@ -1,0 +1,12 @@
+ApiVersion:v.0.1
+resourceType:VirtualNode
+metadata:
+id: ecam
+tags:
+instanceOf:cameraKing
+status:
+hostedOn:ecam
+hosts:
+image_quality: 88
+detected_cars:200
+

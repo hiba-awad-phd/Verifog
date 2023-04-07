@@ -1,0 +1,12 @@
+ApiVersion:v.0.1
+resourceType:VirtualNode
+metadata:
+id: Gluconf
+tags:
+instanceOf:glucosenode
+status:
+hostedOn: Gluconf
+hosts:
+timeleft: 8
+intrusionDetection: 8
+authorityLevelChecking: 4

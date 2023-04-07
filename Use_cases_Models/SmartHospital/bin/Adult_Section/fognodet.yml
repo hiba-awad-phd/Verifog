@@ -1,0 +1,43 @@
+ApiVersion:v.0.1
+resourceType: VirtualNode
+metadata:
+//  alias: capteurt
+  id: Fognode4
+  tags: 
+  - securityLocation: High
+  - impact: A    
+
+Spec:
+    image: tempimage
+    imageRegistry: gitlab.com
+  physicalResources: 
+    networkLinks :
+      downloadLink :
+       - metadata : 
+      //    alias: eth05
+          id : L123452
+          tags: 
+          - security : High 
+          - decryption: onlybyKey
+              Spec:
+        constraints:
+          - networkClass: Wifi
+        networks:
+        sourceNetworks: 
+        - MyNetwork143  
+      uploadLink:
+        //TE
+        - metadata : 
+      //    alias: eth05
+          id : L151506
+          tags: 
+          - security : High 
+          - decryption: onlybyKey
+          
+      Spec:
+        constraints:
+          - networkClass: Wifi
+        networks:
+        sourceNetworks: 
+        - MyNetwork05               
+        

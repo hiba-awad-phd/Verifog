@@ -1,0 +1,5 @@
+ApiVersion:v.0.1
+resourceType:Attribute
+name: detected_cars
+type: 'integer'
+unitOfMeasurment:

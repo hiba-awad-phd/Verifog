@@ -1,0 +1,12 @@
+ApiVersion:v.0.1
+resourceType:VirtualNode
+metadata:
+id: tempconf
+tags:
+instanceOf:tempnode4
+status:
+hostedOn:tempconf
+hosts:
+timeleft: 7
+intrusionDetection: 7
+authorityLevelChecking: 3

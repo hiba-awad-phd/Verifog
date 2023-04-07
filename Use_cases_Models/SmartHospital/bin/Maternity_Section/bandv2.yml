@@ -1,0 +1,69 @@
+ApiVersion:v.0.1
+resourceType: VirtualNode
+metadata:
+ 
+  id: BandwidthNode2
+  tags: 
+  - securityLocation: High
+  - impact: A
+
+
+Spec:
+  image: imgy
+  imageRegistry: gitlab.com
+  physicalResources: 
+    networkLinks :
+      downloadLink :  
+     //GE
+     - metadata : 
+       //   alias: eth03
+          id : L667204
+          tags: 
+          - security : High 
+          - decryption: onlybyKey
+      Spec:
+        constraints:
+          - networkClass: Wifi
+        networks:
+        sourceNetworks: 
+        - MyNetwork03
+     //TE
+ 
+        - metadata : 
+      //    alias: eth05
+          id : L667203
+          tags: 
+          - security : High 
+           - decryption: onlybyKey
+      Spec:
+        constraints:
+          - networkClass: Wifi
+        networks:
+        sourceNetworks: 
+        - MyNetwork05     
+     //BE 
+     - metadata : 
+       
+          id : L667205
+          tags: 
+          - security : High 
+      Spec:
+        constraints:
+          - networkClass: Wifi
+        networks:
+        sourceNetworks: 
+        - MyNetwork04
+      uploadLink:
+      //fognode1
+       - metadata : 
+        
+          id : L667206
+          tags: 
+          - security : High 
+          - encryption: obligated
+      Spec:
+        constraints:
+          - networkClass: Wifi
+        networks:
+        sourceNetworks: 
+        - MyNetwork1

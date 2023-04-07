@@ -1,0 +1,4 @@
+ApiVersion:v.0.1
+resourceType:Attribute
+name: 'available_energy'
+type: 'float'

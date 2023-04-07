@@ -1,0 +1,15 @@
+ApiVersion:v.0.1
+resourceType: VirtualNode
+metadata:
+  id: Led
+  tags:
+  - responseTime: fast
+  - capacity: veryLow
+  - location: entrance
+Spec:
+  image: imed
+  imageRegistry: gitlab.com
+  physicalResources: 
+    networkLinks :
+      downloadLink :
+      uploadLink:

@@ -1,0 +1,12 @@
+ApiVersion:v.0.1
+resourceType: VirtualNode
+metadata:
+id: gatewayconf
+tags:
+instanceOf:gateway
+status:
+hostedOn:gatewayconf
+hosts:
+energy_consumption: 40
+available_energy:66
+green_consumption:30

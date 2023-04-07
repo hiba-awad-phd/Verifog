@@ -1,0 +1,12 @@
+ApiVersion:v.0.1
+resourceType: VirtualNode
+metadata:
+id: BandBP
+tags:
+instanceOf:BandwidthNode
+status:
+hostedOn:BandBP
+hosts:
+
+
+authorityLevelChecking: 2

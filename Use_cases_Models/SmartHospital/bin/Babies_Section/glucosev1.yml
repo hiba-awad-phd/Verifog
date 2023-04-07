@@ -1,0 +1,43 @@
+ApiVersion:v.0.1
+resourceType: VirtualNode
+metadata:
+//  alias: capteurg
+  id: glucosenode3
+  tags: 
+  - securityLocation: High
+  - impact: A
+
+  
+Spec:
+  image: glucoseimage
+  imageRegistry: gitlab.com
+  physicalResources: 
+    networkLinks :
+      downloadLink :
+         
+       - metadata : 
+      //    alias: eth05
+          id : L123454
+          tags: 
+          - security : High 
+          - decryption: onlybyKey
+              Spec:
+        constraints:
+          - networkClass: Wifi
+        networks:
+        sourceNetworks: 
+        - MyNetwork454
+      uploadLink:
+      //GE
+        - metadata : 
+       //   alias: eth03
+          id : L080912
+          tags: 
+          - security : High 
+          - decryption: onlybyKey
+      Spec:
+        constraints:
+          - networkClass: Wifi
+        networks:
+        sourceNetworks: 
+        - MyNetwork03

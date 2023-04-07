@@ -1,0 +1,11 @@
+ApiVersion:v.0.1
+resourceType: VirtualNode
+metadata:
+id: tconfig
+tags:
+instanceOf:Fognode4
+status:
+hostedOn:tconfig
+hosts:
+
+authorityLevelChecking: 1

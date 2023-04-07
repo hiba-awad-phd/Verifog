@@ -1,0 +1,73 @@
+ApiVersion:v.0.1
+resourceType: VirtualNode
+metadata:
+  id: micro1
+  tags:
+  - location: tier12
+  - responseTime: fast
+  - capacity: High 
+Spec: 
+  image: imicro
+  imageRegistry: gitlab.com
+  physicalResources:
+    networkLinks :
+      downloadLink:
+      // camera1
+       - metadata : 
+          id : L253647
+          tags: 
+      Spec:
+        constraints:
+          - networkClass: Wifi
+        networks:
+        sourceNetworks: 
+        - net1c
+      //camera10
+        - metadata : 
+          id : L253551
+          tags: 
+     Spec:
+        constraints:
+          - networkClass: Wifi
+        networks:
+        sourceNetworks: 
+        - net10
+   
+        //camera12
+                - metadata : 
+          id : L253247
+          tags: 
+          
+      Spec:
+        constraints:
+          - networkClass: Wifi
+        networks:
+        sourceNetworks: 
+        - net12
+       
+  //camera13
+                - metadata : 
+          id : L253547
+          tags: 
+          
+      Spec:
+        constraints:
+          - networkClass: Wifi
+        networks:
+        sourceNetworks: 
+        - net13 
+        
+        
+        
+      uploadLink:
+      //fognode1
+    - metadata : 
+          id : L569875
+          tags: 
+          
+      Spec:
+        constraints:
+          - networkClass: Wifi
+        networks:
+        sourceNetworks: 
+        - netc1

@@ -1,0 +1,5 @@
+ApiVersion:v.0.1
+resourceType:Attribute
+name: 'timeleft'
+type: 'float'
+unitOfMeasurment:

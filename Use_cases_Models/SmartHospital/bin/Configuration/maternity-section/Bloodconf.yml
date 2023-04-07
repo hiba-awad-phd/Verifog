@@ -1,0 +1,12 @@
+ApiVersion:v.0.1
+resourceType:VirtualNode
+metadata:
+id: Bloodconf
+tags:
+instanceOf:bloodPn
+status:
+hostedOn:Bloodconf
+hosts:
+timeleft: 20
+intrusionDetection: 8
+authorityLevelChecking: 1

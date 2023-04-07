@@ -1,0 +1,11 @@
+ApiVersion:v.0.1
+resourceType: VirtualNode
+metadata:
+id: c8
+tags:
+instanceOf:camera8
+status:
+hostedOn:c8
+hosts:
+image_quality: 76
+detected_cars:8

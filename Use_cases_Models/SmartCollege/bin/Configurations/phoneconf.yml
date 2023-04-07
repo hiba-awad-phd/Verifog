@@ -1,0 +1,12 @@
+ApiVersion:v.0.1
+resourceType: VirtualNode
+metadata:
+id: phoneconf
+tags:
+instanceOf:phone
+status:
+hostedOn:phoneconf
+hosts:
+energy_consumption: 120
+available_energy:43
+green_consumption:111

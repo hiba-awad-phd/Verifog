@@ -1,0 +1,127 @@
+ApiVersion:v.0.1
+resourceType:Application
+metadata:
+
+  id: allocation
+  tags:
+    -region: FR
+Spec:
+  services:
+    -BandwidthAllocator:
+      metadata:
+  		
+ 	    id: BandwidthAllocator 
+ 	    tags: - region: Paris
+	  Spec:
+	    networkPorts:
+	      -'Allocation':
+          protocol: TCP
+          portNumber: 6363
+          hostPort: 9898
+          -'Clustering':
+          protocol: TCP
+          portNumber: 6262
+          hostPort: 9999
+       hostedOn:
+       virtualNodes:
+         - BandwidthNode
+        softwarePacakge:
+        - phpCode:
+         command: 'curl myrepo.com/BandwidthAllo.php; php start BandwidthAllo.php '
+        constraints:
+        	      
+    -GlucoseEvent:
+      metadata: 
+     
+        id: glucoseAlert
+        tags: 
+          -Place: hospital
+          -region: Nanterre
+      Spec:
+        networkPorts:
+        -'Event':
+        protocol: TCP
+        portNumber:5555
+        hostPort: 5155
+        -'sensor':
+        protocol: TCP
+        portNumber: 8981
+        hostPort: 8891
+       hostedOn:
+       virtualNodes:
+       - AlertnodeG
+        softwarePacakge:
+        - phpCode:
+         command: 'curl myrepo.com/AlertG.php; php start AlertG.php '
+        constraints: 
+         
+    -TemperatureEvent:
+        metadata: 
+        //alias: TemperatureAlert
+        id: TemperatureAlert
+        tags: 
+          -Place: hospital
+          -region: Nanterre
+      Spec:
+        networkPorts:
+        -'Event':
+        protocol: TCP
+        portNumber:5554
+        hostPort: 5455
+        -'sensor':
+        protocol: TCP
+        portNumber: 8941
+        hostPort: 4891
+       hostedOn:
+       virtualNodes:
+       - AlertnodeT
+        softwarePacakge:
+        - phpCode:
+         command: 'curl myrepo.com/AlertT.php; php start AlertT.php '
+        constraints: 
+    -BloodPressureEvent:
+        metadata: 
+       // alias: BloodPAlert
+        id: BloodPAlert
+        tags: 
+          -Place: hospital
+          -region: Nanterre
+      Spec:
+        networkPorts:
+        -'Event':
+        protocol: TCP
+        portNumber:5554
+        hostPort: 5455
+        -'sensor':
+        protocol: TCP
+        portNumber: 8941
+        hostPort: 4891
+       hostedOn:
+       virtualNodes:
+       - AlertnodeB
+        softwarePacakge:
+        - phpCode:
+         command: 'curl myrepo.com/AlertBP.php; php start AlertBP.php '
+        constraints:
+connectors:
+  - BandwidthAllocatorToBloodPressureEvent:
+    sourceServices:
+    - BloodPAlert
+    targetServices:
+    - BandwidthAllocator		
+    constraints:    - latency :1   
+  - BandwidthAllocatorToTemperatureEvent:
+    sourceServices:
+    - TemperatureAlert
+    targetServices:
+    - BandwidthAllocator		
+    constraints: - latency :1  
+  - BandwidthAllocatorToGlucoseEvent:  
+      sourceServices:
+    - glucoseAlert
+    targetServices:
+    - BandwidthAllocator		
+    constraints:  - latency :1      
+        
+        
+        

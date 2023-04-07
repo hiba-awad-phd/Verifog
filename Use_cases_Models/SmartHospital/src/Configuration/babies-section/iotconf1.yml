@@ -1,0 +1,12 @@
+ApiVersion:v.0.1
+resourceType:VirtualNode
+metadata:
+id: iotconf1
+tags:
+instanceOf:admin12
+status:
+hostedOn: iotconf1
+hosts:
+timeleft: 44
+intrusionDetection: 4
+authorityLevelChecking: 3

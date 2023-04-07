@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            id="fr.imta.semafor.fogDsl.generateChoco"
+            name="generate constraint problem">
+      </command>
+      <command
+            id="fr.imta.semafor.fogDsl.queryModel"
+            name="Query the model">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="fr.imta.semafor.handlers.ChocoGenerateHandler"
+            commandId="fr.imta.semafor.fogDsl.generateChoco">
+      </handler>
+      <handler
+            class="fr.imta.semafor.handlers.InspectionHandler"
+            commandId="fr.imta.semafor.fogDsl.queryModel">
+      </handler>
+      <handler
+            class="fr.imta.semafor.handlers.SaveModeHandler"
+            commandId="fr.imta.semafor.fogDsl.saveModel">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="true"
+            locationURI="popup:org.eclipse.jdt.ui.PackageExplorer">
+         <menu
+               id="Semafor_Choco"
+               label="SeMaFoR">
+            <command
+                  commandId="fr.imta.semafor.fogDsl.generateChoco"
+                  id="semafor.fogDsl.generateChoco"
+                  label="Deploy Resource"
+                  style="push">
+               <visibleWhen
+                     checkEnabled="true">
+               </visibleWhen>
+            </command>
+            <command
+                  commandId="fr.imta.semafor.fogDsl.queryModel"
+                  id="fr.imta.semafor.QueryModelUICommand"
+                  label="QueryModel"
+                  style="push">
+               <visibleWhen
+                     checkEnabled="true">
+               </visibleWhen>
+            </command>
+            <command
+                  commandId="fr.imta.semafor.fogDsl.saveModel"
+                  id="fr.imta.semafor.fogDsl.saveModel"
+                  label="Save the Model"
+                  style="push">
+            </command>
+         </menu>
+      </menuContribution>
+   </extension>
+
+</plugin>

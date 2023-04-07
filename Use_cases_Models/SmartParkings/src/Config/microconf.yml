@@ -1,0 +1,9 @@
+ApiVersion:v.0.1
+resourceType: VirtualNode
+metadata:
+id: microco
+tags:
+instanceOf:micro1
+status:
+hostedOn:microco
+hosts:

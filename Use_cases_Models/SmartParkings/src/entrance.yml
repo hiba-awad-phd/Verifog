@@ -1,0 +1,11 @@
+ApiVersion:v.0.1
+resourceType:PhysicalNode
+metadata:
+id: cameraKing
+tags : 
+- detection_quality: veryhigh
+Spec:
+physicalResources:
+networkLinks:
+downloadLink:
+uploadLink:

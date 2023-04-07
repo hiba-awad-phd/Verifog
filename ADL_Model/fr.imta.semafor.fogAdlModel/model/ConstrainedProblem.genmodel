@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/fr.imta.semafor.fogAdlModel/src" modelPluginID="fr.imta.semafor.fogAdlModel"
+    modelName="ConstrainedProblem" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>ConstrainedProblem.ecore</foreignModel>
+  <genPackages prefix="ConstrainedProblem" disposableProviderFactory="true" ecorePackage="ConstrainedProblem.ecore#/">
+    <genClasses ecoreClass="ConstrainedProblem.ecore#//Problem">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConstrainedProblem.ecore#//Problem/constraints"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference ConstrainedProblem.ecore#//Problem/constrainedobjects"/>
+    </genClasses>
+    <genClasses ecoreClass="ConstrainedProblem.ecore#//ConstrainedObject">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ConstrainedProblem.ecore#//ConstrainedObject/schema"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference ConstrainedProblem.ecore#//ConstrainedObject/constrainedvariables"/>
+    </genClasses>
+    <genClasses ecoreClass="ConstrainedProblem.ecore#//ConstrainedVariable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConstrainedProblem.ecore#//ConstrainedVariable/hint"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ConstrainedProblem.ecore#//ConstrainedVariable/schema"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ConstrainedProblem.ecore#//ConstrainedVariable/constrainedobject"/>
+    </genClasses>
+    <genClasses ecoreClass="ConstrainedProblem.ecore#//Constraint">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConstrainedProblem.ecore#//Constraint/expressions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConstrainedProblem.ecore#//Constraint/comparaisonOperator"/>
+    </genClasses>
+    <genClasses ecoreClass="ConstrainedProblem.ecore#//Schema">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConstrainedProblem.ecore#//Schema/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConstrainedProblem.ecore#//Schema/possibleValues"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ConstrainedProblem.ecore#//Schema/constrainedobjectschemas"/>
+    </genClasses>
+    <genClasses ecoreClass="ConstrainedProblem.ecore#//Expression"/>
+    <genClasses ecoreClass="ConstrainedProblem.ecore#//IntValueExpression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConstrainedProblem.ecore#//IntValueExpression/value"/>
+    </genClasses>
+    <genClasses ecoreClass="ConstrainedProblem.ecore#//VariableExpression"/>
+    <genClasses ecoreClass="ConstrainedProblem.ecore#//ComplexExpression">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ConstrainedProblem.ecore#//ComplexExpression/expressions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConstrainedProblem.ecore#//ComplexExpression/arithmeticOperator"/>
+    </genClasses>
+    <genClasses ecoreClass="ConstrainedProblem.ecore#//ConstrainedObjectSchema">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ConstrainedProblem.ecore#//ConstrainedObjectSchema/variables"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConstrainedProblem.ecore#//ConstrainedObjectSchema/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConstrainedProblem.ecore#//ConstrainedObjectSchema/type"/>
+    </genClasses>
+    <genClasses ecoreClass="ConstrainedProblem.ecore#//DirectVariableExpre">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ConstrainedProblem.ecore#//DirectVariableExpre/constrainedVariable"/>
+    </genClasses>
+    <genClasses ecoreClass="ConstrainedProblem.ecore#//IndirectVariableExpre">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ConstrainedProblem.ecore#//IndirectVariableExpre/constrainedObject"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConstrainedProblem.ecore#//IndirectVariableExpre/variableName"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

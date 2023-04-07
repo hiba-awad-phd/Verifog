@@ -1,0 +1,12 @@
+ApiVersion:v.0.1
+resourceType: VirtualNode
+metadata:
+id: waconf
+tags:
+instanceOf:watch
+status:
+hostedOn:waconf
+hosts:
+energy_consumption: 20
+available_energy:43
+green_consumption:14

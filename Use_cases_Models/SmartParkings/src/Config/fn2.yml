@@ -1,0 +1,10 @@
+ApiVersion:v.0.1
+resourceType: VirtualNode
+metadata:
+id: fn2
+tags:
+instanceOf:Fognode2
+status:
+hostedOn:fn2
+hosts:
+coveredPlaces: 10

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated fogAdlModel -->
+      <package
+            uri="http://www.example.org/fogAdlModel"
+            class="fr.imta.semafor.fogAdlModel.FogAdlModelPackage"
+            genModel="model/fogAdlModel.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ConstrainedProblem -->
+      <package
+            uri="http://www.example.org/ConstrainedProblem"
+            class="ConstrainedProblem.ConstrainedProblemPackage"
+            genModel="model/ConstrainedProblem.genmodel"/>
+   </extension>
+
+</plugin>

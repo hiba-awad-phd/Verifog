@@ -1,0 +1,40 @@
+ApiVersion:v.0.1
+resourceType: VirtualNode
+metadata:
+  id: cloudserver
+  tags:
+  - responseTime: Low
+  - capacity: veryHigh
+  
+Spec: 
+  image: imcloud
+  imageRegistry: gitlab.com
+  physicalResources:
+    operatingSystem: 'Linux'
+    totalCost: 
+      Lesser: 1
+    networkLinks :
+      downloadLink:
+      //proxy
+                 - metadata : 
+          id : L222555
+          tags: 
+          
+      Spec:
+        constraints:
+          - networkClass: Wifi
+        networks:
+        sourceNetworks: 
+        - netPC
+      uploadLink:
+      //proxy
+                 - metadata : 
+          id : L555222
+          tags: 
+          
+      Spec:
+        constraints:
+          - networkClass: Wifi
+        networks:
+        sourceNetworks: 
+        - netCP

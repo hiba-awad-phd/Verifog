@@ -1,0 +1,27 @@
+ApiVersion:v.0.1
+resourceType: PhysicalNode
+metadata:
+
+  id: camera16
+  tags:
+  - location: z2
+  - responseTime: fast
+  - capacity: veryLow
+  - detection_quality: veryhigh
+Spec: 
+  
+  physicalResources:
+    networkLinks :
+      downloadLink:
+      uploadLink:
+      //micro1
+      - metadata : 
+          id : L256647
+          tags: 
+          
+      Spec:
+        constraints:
+          - networkClass: Wifi
+        networks:
+        sourceNetworks: 
+        - net16

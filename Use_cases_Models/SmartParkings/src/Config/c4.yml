@@ -1,0 +1,11 @@
+ApiVersion:v.0.1
+resourceType: VirtualNode
+metadata:
+id: c4
+tags:
+instanceOf:camera4
+status:
+hostedOn:c4
+hosts:
+image_quality: 98
+detected_cars:6

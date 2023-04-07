@@ -1,0 +1,12 @@
+ApiVersion:v.0.1
+resourceType: VirtualNode
+metadata:
+id: cloudconf
+tags:
+instanceOf:cloud
+status:
+hostedOn:cloudconf
+hosts:
+energy_consumption: 60
+available_energy:56
+green_consumption:56

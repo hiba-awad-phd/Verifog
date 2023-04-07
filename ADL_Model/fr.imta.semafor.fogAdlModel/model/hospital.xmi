@@ -1,0 +1,1318 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fogAdlModel="http://www.example.org/fogAdlModel">
+  <fogAdlModel:VirtualNodeSpecification name="BandwidthNode" imageName="imgy" imageRegistry="gitlab">
+    <tags key="securityLocation" value="High"/>
+    <tags key="impact" value="A"/>
+    <downloadLink name="L151504">
+      <tags key="security" value="High"/>
+      <tags key="decryption" value="onlybyKey"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression" value="Wifi"/>
+      </constraints>
+    </downloadLink>
+    <downloadLink name="L151506">
+      <tags key="security" value="High"/>
+      <tags key="decryption" value="onlybyKey"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression" value="Wifi"/>
+      </constraints>
+    </downloadLink>
+    <downloadLink name="L151505">
+      <tags key="security" value="High"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression" value="Wifi"/>
+      </constraints>
+    </downloadLink>
+    <uploadLink name="L151501">
+      <tags key="security" value="High"/>
+      <tags key="encryption" value="obligated"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression" value="Wifi"/>
+      </constraints>
+    </uploadLink>
+  </fogAdlModel:VirtualNodeSpecification>
+  <fogAdlModel:VirtualNodeSpecification name="Fognode1" imageName="im0" imageRegistry="gitlab">
+    <tags key="securityLocation" value="High"/>
+    <tags key="impact" value="A"/>
+    <downloadLink name="L151501">
+      <tags key="security" value="High"/>
+      <tags key="decryption" value="onlybyKey"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression" value="Wifi"/>
+      </constraints>
+    </downloadLink>
+    <downloadLink name="L36369">
+      <tags key="security" value="High"/>
+      <tags key="decryption" value="onlybyKey"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression"/>
+      </constraints>
+    </downloadLink>
+    <uploadLink name="L36377">
+      <tags key="security" value="High"/>
+      <tags key="encryption" value="obligated"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression"/>
+      </constraints>
+    </uploadLink>
+    <uploadLink name="L151502">
+      <tags key="security" value="High"/>
+      <tags key="encryption" value="obligated"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression" value="Wifi"/>
+      </constraints>
+    </uploadLink>
+    <uploadLink name="L151503">
+      <tags key="security" value="High"/>
+      <tags key="encryption" value="obligated"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression" value="Wifi"/>
+      </constraints>
+    </uploadLink>
+  </fogAdlModel:VirtualNodeSpecification>
+  <fogAdlModel:PhysicalNodeSpecification name="admin1">
+    <tags key="Place" value="hospital"/>
+    <tags key="securityLocation" value="moderate"/>
+    <tags key="impact" value="B"/>
+    <downloadLink name="L151502">
+      <tags key="security" value="moderate"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression" value="Wifi"/>
+      </constraints>
+    </downloadLink>
+  </fogAdlModel:PhysicalNodeSpecification>
+  <fogAdlModel:PhysicalNodeSpecification name="admin2">
+    <tags key="Place" value="hospital"/>
+    <tags key="securityLocation" value="moderate"/>
+    <tags key="impact" value="B"/>
+    <downloadLink name="L151503">
+      <tags key="security" value="moderate"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression" value="Wifi"/>
+      </constraints>
+    </downloadLink>
+  </fogAdlModel:PhysicalNodeSpecification>
+  <fogAdlModel:PhysicalNodeSpecification name="BloodEvent2">
+    <constraints>
+      <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="CpuCores"/>
+      <expression xsi:type="fogAdlModel:IntegerValueExpression" value="55"/>
+    </constraints>
+  </fogAdlModel:PhysicalNodeSpecification>
+  <fogAdlModel:PhysicalNodeSpecification name="bandphys2">
+    <constraints>
+      <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="CpuCores"/>
+      <expression xsi:type="fogAdlModel:IntegerValueExpression" value="55"/>
+    </constraints>
+  </fogAdlModel:PhysicalNodeSpecification>
+  <fogAdlModel:PhysicalNodeSpecification name="datacenter">
+    <tags key="securityLocation" value="High"/>
+    <tags key="impact" value="A"/>
+    <constraints>
+      <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="operatingSystem"/>
+      <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="Linux"/>
+    </constraints>
+    <constraints operator="Lesser">
+      <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="totalCost"/>
+      <expression xsi:type="fogAdlModel:IntegerValueExpression" value="1"/>
+    </constraints>
+    <downloadLink name="L36377">
+      <tags key="security" value="High"/>
+      <tags key="decryption" value="onlybyKey"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression"/>
+      </constraints>
+    </downloadLink>
+    <uploadLink name="L36369">
+      <tags key="security" value="High"/>
+      <tags key="encryption" value="obligated"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression"/>
+      </constraints>
+    </uploadLink>
+    <uploadLink name="L36345">
+      <tags key="security" value="High"/>
+      <tags key="encryption" value="obligated"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression"/>
+      </constraints>
+    </uploadLink>
+  </fogAdlModel:PhysicalNodeSpecification>
+  <fogAdlModel:VirtualNodeSpecification name="Fognode3" imageName="glucoseimage" imageRegistry="gitlab">
+    <tags key="securityLocation" value="High"/>
+    <tags key="impact" value="A"/>
+    <downloadLink name="L123450">
+      <tags key="security" value="High"/>
+      <tags key="decryption" value="onlybyKey"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression" value="Wifi"/>
+      </constraints>
+    </downloadLink>
+    <uploadLink name="L151504">
+      <tags key="security" value="High"/>
+      <tags key="decryption" value="onlybyKey"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression" value="Wifi"/>
+      </constraints>
+    </uploadLink>
+  </fogAdlModel:VirtualNodeSpecification>
+  <fogAdlModel:PhysicalNodeSpecification name="fog">
+    <constraints>
+      <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="CpuCores"/>
+      <expression xsi:type="fogAdlModel:IntegerValueExpression" value="55"/>
+    </constraints>
+  </fogAdlModel:PhysicalNodeSpecification>
+  <fogAdlModel:VirtualNodeSpecification name="Fognode4" imageName="tempimage" imageRegistry="gitlab">
+    <tags key="securityLocation" value="High"/>
+    <tags key="impact" value="A"/>
+    <downloadLink name="L123452">
+      <tags key="security" value="High"/>
+      <tags key="decryption" value="onlybyKey"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression" value="Wifi"/>
+      </constraints>
+    </downloadLink>
+    <uploadLink name="L151506">
+      <tags key="security" value="High"/>
+      <tags key="decryption" value="onlybyKey"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression" value="Wifi"/>
+      </constraints>
+    </uploadLink>
+  </fogAdlModel:VirtualNodeSpecification>
+  <fogAdlModel:VirtualNodeSpecification name="Fognode2" imageName="bloodimage" imageRegistry="gitlab">
+    <tags key="securityLocation" value="veryHigh"/>
+    <tags key="impact" value="A"/>
+    <downloadLink name="L123451">
+      <tags key="security" value="High"/>
+      <tags key="decryption" value="onlybyKey"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression" value="Wifi"/>
+      </constraints>
+    </downloadLink>
+    <uploadLink name="L151505">
+      <tags key="security" value="High"/>
+      <tags key="decryption" value="onlybyKey"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression" value="Wifi"/>
+      </constraints>
+    </uploadLink>
+  </fogAdlModel:VirtualNodeSpecification>
+  <fogAdlModel:PhysicalNodeSpecification name="glucoseEvent2">
+    <constraints>
+      <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="CpuCores"/>
+      <expression xsi:type="fogAdlModel:IntegerValueExpression" value="55"/>
+    </constraints>
+  </fogAdlModel:PhysicalNodeSpecification>
+  <fogAdlModel:PhysicalNodeSpecification name="tempEvent2">
+    <constraints>
+      <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="CpuCores"/>
+      <expression xsi:type="fogAdlModel:IntegerValueExpression" value="55"/>
+    </constraints>
+  </fogAdlModel:PhysicalNodeSpecification>
+  <fogAdlModel:Application name="allocation">
+    <tags key="region" value="FR"/>
+    <serviceTypes name="BandwidthAllocator">
+      <tags key="region" value="Paris"/>
+      <implementedBy name="phpCode" installStartScript="curl myrepo.com/BandwidthAllo.php; php start BandwidthAllo.php "/>
+      <networkPorts portNumber="6363" portName="Allocation" hostPort="9898"/>
+      <networkPorts portNumber="6262" portName="Clustering" hostPort="9999"/>
+    </serviceTypes>
+    <serviceTypes name="glucoseAlert">
+      <tags key="Place" value="hospital"/>
+      <tags key="region" value="Nanterre"/>
+      <implementedBy name="phpCode" installStartScript="curl myrepo.com/AlertG.php; php start AlertG.php "/>
+      <networkPorts portNumber="5555" portName="Event" hostPort="5155"/>
+      <networkPorts portNumber="8981" portName="sensor" hostPort="8891"/>
+    </serviceTypes>
+    <serviceTypes name="TemperatureAlert">
+      <tags key="Place" value="hospital"/>
+      <tags key="region" value="Nanterre"/>
+      <implementedBy name="phpCode" installStartScript="curl myrepo.com/AlertT.php; php start AlertT.php "/>
+      <networkPorts portNumber="5554" portName="Event" hostPort="5455"/>
+      <networkPorts portNumber="8941" portName="sensor" hostPort="4891"/>
+    </serviceTypes>
+    <serviceTypes name="BloodPAlert">
+      <tags key="Place" value="hospital"/>
+      <tags key="region" value="Nanterre"/>
+      <implementedBy name="phpCode" installStartScript="curl myrepo.com/AlertBP.php; php start AlertBP.php "/>
+      <networkPorts portNumber="5554" portName="Event" hostPort="5455"/>
+      <networkPorts portNumber="8941" portName="sensor" hostPort="4891"/>
+    </serviceTypes>
+    <connectortypes name="BandwidthAllocatorToBloodPressureEvent">
+      <targetServices href="platform:/resource/SmartHospital/src/Application.yml#|1"/>
+      <sourceServices href="platform:/resource/SmartHospital/src/Application.yml#|0"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="latency"/>
+        <expression xsi:type="fogAdlModel:IntegerValueExpression" value="1"/>
+      </constraints>
+    </connectortypes>
+    <connectortypes name="BandwidthAllocatorToTemperatureEvent">
+      <targetServices href="platform:/resource/SmartHospital/src/Application.yml#|3"/>
+      <sourceServices href="platform:/resource/SmartHospital/src/Application.yml#|2"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="latency"/>
+        <expression xsi:type="fogAdlModel:IntegerValueExpression" value="1"/>
+      </constraints>
+    </connectortypes>
+    <connectortypes name="BandwidthAllocatorToGlucoseEvent">
+      <targetServices href="platform:/resource/SmartHospital/src/Application.yml#|5"/>
+      <sourceServices href="platform:/resource/SmartHospital/src/Application.yml#|4"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="latency"/>
+        <expression xsi:type="fogAdlModel:IntegerValueExpression" value="1"/>
+      </constraints>
+    </connectortypes>
+  </fogAdlModel:Application>
+  <fogAdlModel:VirtualNodeSpecification name="BandwidthNode1" imageName="imgy" imageRegistry="gitlab">
+    <tags key="securityLocation" value="High"/>
+    <tags key="impact" value="A"/>
+    <downloadLink name="L080912">
+      <tags key="security" value="High"/>
+      <tags key="decryption" value="onlybyKey"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression" value="Wifi"/>
+      </constraints>
+    </downloadLink>
+    <downloadLink name="L080914">
+      <tags key="security" value="High"/>
+      <tags key="decryption" value="onlybyKey"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression" value="Wifi"/>
+      </constraints>
+    </downloadLink>
+    <downloadLink name="L080913">
+      <tags key="security" value="High"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression" value="Wifi"/>
+      </constraints>
+    </downloadLink>
+    <uploadLink name="L080910">
+      <tags key="security" value="High"/>
+      <tags key="encryption" value="obligated"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression" value="Wifi"/>
+      </constraints>
+    </uploadLink>
+  </fogAdlModel:VirtualNodeSpecification>
+  <fogAdlModel:VirtualNodeSpecification name="bloodPnode2" imageName="bloodimage" imageRegistry="gitlab">
+    <tags key="securityLocation" value="veryHigh"/>
+    <tags key="impact" value="A"/>
+    <downloadLink name="L123453">
+      <tags key="security" value="High"/>
+      <tags key="decryption" value="onlybyKey"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression" value="Wifi"/>
+      </constraints>
+    </downloadLink>
+    <uploadLink name="L080913">
+      <tags key="security" value="High"/>
+      <tags key="decryption" value="onlybyKey"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression" value="Wifi"/>
+      </constraints>
+    </uploadLink>
+  </fogAdlModel:VirtualNodeSpecification>
+  <fogAdlModel:PhysicalNodeSpecification name="BloodEvent1">
+    <constraints>
+      <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="CpuCores"/>
+      <expression xsi:type="fogAdlModel:IntegerValueExpression" value="55"/>
+    </constraints>
+  </fogAdlModel:PhysicalNodeSpecification>
+  <fogAdlModel:PhysicalNodeSpecification name="datacenter1">
+    <tags key="securityLocation" value="High"/>
+    <tags key="impact" value="A"/>
+    <constraints>
+      <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="operatingSystem"/>
+      <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="Linux"/>
+    </constraints>
+    <constraints operator="Lesser">
+      <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="totalCost"/>
+      <expression xsi:type="fogAdlModel:IntegerValueExpression" value="1"/>
+    </constraints>
+    <downloadLink name="L36375">
+      <tags key="security" value="High"/>
+      <tags key="decryption" value="onlybyKey"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression"/>
+      </constraints>
+    </downloadLink>
+    <uploadLink name="L38391">
+      <tags key="security" value="High"/>
+      <tags key="encryption" value="obligated"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression"/>
+      </constraints>
+    </uploadLink>
+    <uploadLink name="L36346">
+      <tags key="security" value="High"/>
+      <tags key="encryption" value="obligated"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression"/>
+      </constraints>
+    </uploadLink>
+  </fogAdlModel:PhysicalNodeSpecification>
+  <fogAdlModel:VirtualNodeSpecification name="Fognode11" imageName="im0" imageRegistry="gitlab">
+    <tags key="securityLocation" value="High"/>
+    <tags key="impact" value="A"/>
+    <downloadLink name="L080910">
+      <tags key="security" value="High"/>
+      <tags key="decryption" value="onlybyKey"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression" value="Wifi"/>
+      </constraints>
+    </downloadLink>
+    <downloadLink name="L38391">
+      <tags key="security" value="High"/>
+      <tags key="decryption" value="onlybyKey"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression"/>
+      </constraints>
+    </downloadLink>
+    <uploadLink name="L36375">
+      <tags key="security" value="High"/>
+      <tags key="encryption" value="obligated"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression"/>
+      </constraints>
+    </uploadLink>
+    <uploadLink name="L080911">
+      <tags key="security" value="High"/>
+      <tags key="encryption" value="obligated"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression" value="Wifi"/>
+      </constraints>
+    </uploadLink>
+    <uploadLink name="L080915">
+      <tags key="security" value="High"/>
+      <tags key="encryption" value="obligated"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression" value="Wifi"/>
+      </constraints>
+    </uploadLink>
+  </fogAdlModel:VirtualNodeSpecification>
+  <fogAdlModel:PhysicalNodeSpecification name="fog1">
+    <constraints>
+      <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="CpuCores"/>
+      <expression xsi:type="fogAdlModel:IntegerValueExpression" value="55"/>
+    </constraints>
+  </fogAdlModel:PhysicalNodeSpecification>
+  <fogAdlModel:VirtualNodeSpecification name="glucosenode3" imageName="glucoseimage" imageRegistry="gitlab">
+    <tags key="securityLocation" value="High"/>
+    <tags key="impact" value="A"/>
+    <downloadLink name="L123454">
+      <tags key="security" value="High"/>
+      <tags key="decryption" value="onlybyKey"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression" value="Wifi"/>
+      </constraints>
+    </downloadLink>
+    <uploadLink name="L080912">
+      <tags key="security" value="High"/>
+      <tags key="decryption" value="onlybyKey"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression" value="Wifi"/>
+      </constraints>
+    </uploadLink>
+  </fogAdlModel:VirtualNodeSpecification>
+  <fogAdlModel:PhysicalNodeSpecification name="glucoseEvent1">
+    <constraints>
+      <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="CpuCores"/>
+      <expression xsi:type="fogAdlModel:IntegerValueExpression" value="55"/>
+    </constraints>
+  </fogAdlModel:PhysicalNodeSpecification>
+  <fogAdlModel:PhysicalNodeSpecification name="admin12">
+    <tags key="Place" value="hospital"/>
+    <tags key="securityLocation" value="moderate"/>
+    <tags key="impact" value="B"/>
+    <downloadLink name="L080911">
+      <tags key="security" value="moderate"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression" value="Wifi"/>
+      </constraints>
+    </downloadLink>
+  </fogAdlModel:PhysicalNodeSpecification>
+  <fogAdlModel:PhysicalNodeSpecification name="admin21">
+    <tags key="Place" value="hospital"/>
+    <tags key="securityLocation" value="moderate"/>
+    <tags key="impact" value="B"/>
+    <downloadLink name="L080915">
+      <tags key="security" value="moderate"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression" value="Wifi"/>
+      </constraints>
+    </downloadLink>
+  </fogAdlModel:PhysicalNodeSpecification>
+  <fogAdlModel:PhysicalNodeSpecification name="bandphys1">
+    <constraints>
+      <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="CpuCores"/>
+      <expression xsi:type="fogAdlModel:IntegerValueExpression" value="55"/>
+    </constraints>
+  </fogAdlModel:PhysicalNodeSpecification>
+  <fogAdlModel:PhysicalNodeSpecification name="tempEvent1">
+    <constraints>
+      <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="CpuCores"/>
+      <expression xsi:type="fogAdlModel:IntegerValueExpression" value="55"/>
+    </constraints>
+  </fogAdlModel:PhysicalNodeSpecification>
+  <fogAdlModel:VirtualNodeSpecification name="tempnode4" imageName="tempimage" imageRegistry="gitlab">
+    <tags key="securityLocation" value="High"/>
+    <tags key="impact" value="A"/>
+    <downloadLink name="L123455">
+      <tags key="security" value="High"/>
+      <tags key="decryption" value="onlybyKey"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression" value="Wifi"/>
+      </constraints>
+    </downloadLink>
+    <uploadLink name="L080914">
+      <tags key="security" value="High"/>
+      <tags key="decryption" value="onlybyKey"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression" value="Wifi"/>
+      </constraints>
+    </uploadLink>
+  </fogAdlModel:VirtualNodeSpecification>
+  <fogAdlModel:VirtualNode name="BandBP">
+    <attributes value="20">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/Bandwidthconfig2.yml#|2"/>
+    </attributes>
+    <attributes value="5">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/Bandwidthconfig2.yml#|3"/>
+    </attributes>
+    <attributes value="156">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/Bandwidthconfig2.yml#|4"/>
+    </attributes>
+    <attributes value="6">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/Bandwidthconfig2.yml#|5"/>
+    </attributes>
+    <isInstanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/Bandwidthconfig2.yml#|0"/>
+    <hostingNode href="platform:/resource/SmartHospital/src/Configuration/adulte-section/Bandwidthconfig2.yml#|1"/>
+  </fogAdlModel:VirtualNode>
+  <fogAdlModel:VirtualNode name="BandBP1">
+    <attributes value="30">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/bandwidthconfig1.yml#|2"/>
+    </attributes>
+    <attributes value="2">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/bandwidthconfig1.yml#|3"/>
+    </attributes>
+    <attributes value="156">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/bandwidthconfig1.yml#|4"/>
+    </attributes>
+    <attributes value="5">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/bandwidthconfig1.yml#|5"/>
+    </attributes>
+    <isInstanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/bandwidthconfig1.yml#|0"/>
+    <hostingNode href="platform:/resource/SmartHospital/src/Configuration/adulte-section/bandwidthconfig1.yml#|1"/>
+  </fogAdlModel:VirtualNode>
+  <fogAdlModel:VirtualNode name="BPconfig">
+    <attributes value="3">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/bloodPressureconfig.yml#|2"/>
+    </attributes>
+    <attributes value="6">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/bloodPressureconfig.yml#|3"/>
+    </attributes>
+    <attributes value="189">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/bloodPressureconfig.yml#|4"/>
+    </attributes>
+    <attributes value="2">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/bloodPressureconfig.yml#|5"/>
+    </attributes>
+    <isInstanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/bloodPressureconfig.yml#|0"/>
+    <hostingNode href="platform:/resource/SmartHospital/src/Configuration/adulte-section/bloodPressureconfig.yml#|1"/>
+  </fogAdlModel:VirtualNode>
+  <fogAdlModel:VirtualNode name="Cloudconfig">
+    <attributes value="98">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/cloudconfig.yml#|2"/>
+    </attributes>
+    <attributes value="19">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/cloudconfig.yml#|3"/>
+    </attributes>
+    <attributes value="563">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/cloudconfig.yml#|4"/>
+    </attributes>
+    <attributes value="3">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/cloudconfig.yml#|5"/>
+    </attributes>
+    <isInstanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/cloudconfig.yml#|0"/>
+    <hostingNode href="platform:/resource/SmartHospital/src/Configuration/adulte-section/cloudconfig.yml#|1"/>
+  </fogAdlModel:VirtualNode>
+  <fogAdlModel:VirtualNode name="Cloudconfig1">
+    <attributes value="90">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/cloudconfig1.yml#|2"/>
+    </attributes>
+    <attributes value="8">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/cloudconfig1.yml#|3"/>
+    </attributes>
+    <attributes value="563">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/cloudconfig1.yml#|4"/>
+    </attributes>
+    <attributes value="4">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/cloudconfig1.yml#|5"/>
+    </attributes>
+    <isInstanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/cloudconfig1.yml#|0"/>
+    <hostingNode href="platform:/resource/SmartHospital/src/Configuration/adulte-section/cloudconfig1.yml#|1"/>
+  </fogAdlModel:VirtualNode>
+  <fogAdlModel:VirtualNode name="fogconfig">
+    <attributes value="8">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/fognodeconfig.yml#|2"/>
+    </attributes>
+    <attributes value="1">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/fognodeconfig.yml#|3"/>
+    </attributes>
+    <attributes value="896">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/fognodeconfig.yml#|4"/>
+    </attributes>
+    <attributes value="15">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/fognodeconfig.yml#|5"/>
+    </attributes>
+    <isInstanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/fognodeconfig.yml#|0"/>
+    <hostingNode href="platform:/resource/SmartHospital/src/Configuration/adulte-section/fognodeconfig.yml#|1"/>
+  </fogAdlModel:VirtualNode>
+  <fogAdlModel:VirtualNode name="fogconfig1">
+    <attributes value="1">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/fognodeconfig1.yml#|2"/>
+    </attributes>
+    <attributes value="55">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/fognodeconfig1.yml#|3"/>
+    </attributes>
+    <attributes value="896">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/fognodeconfig1.yml#|4"/>
+    </attributes>
+    <attributes value="6">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/fognodeconfig1.yml#|5"/>
+    </attributes>
+    <isInstanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/fognodeconfig1.yml#|0"/>
+    <hostingNode href="platform:/resource/SmartHospital/src/Configuration/adulte-section/fognodeconfig1.yml#|1"/>
+  </fogAdlModel:VirtualNode>
+  <fogAdlModel:VirtualNode name="Gconfig">
+    <attributes value="18">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/glucoseconfig.yml#|2"/>
+    </attributes>
+    <attributes value="15">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/glucoseconfig.yml#|3"/>
+    </attributes>
+    <attributes value="367">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/glucoseconfig.yml#|4"/>
+    </attributes>
+    <attributes value="3">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/glucoseconfig.yml#|5"/>
+    </attributes>
+    <isInstanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/glucoseconfig.yml#|0"/>
+    <hostingNode href="platform:/resource/SmartHospital/src/Configuration/adulte-section/glucoseconfig.yml#|1"/>
+  </fogAdlModel:VirtualNode>
+  <fogAdlModel:VirtualNode name="HPconfig">
+    <attributes value="62">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/hospitalconfig.yml#|2"/>
+    </attributes>
+    <attributes value="1">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/hospitalconfig.yml#|3"/>
+    </attributes>
+    <attributes value="877">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/hospitalconfig.yml#|4"/>
+    </attributes>
+    <attributes value="3">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/hospitalconfig.yml#|5"/>
+    </attributes>
+    <isInstanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/hospitalconfig.yml#|0"/>
+    <hostingNode href="platform:/resource/SmartHospital/src/Configuration/adulte-section/hospitalconfig.yml#|1"/>
+  </fogAdlModel:VirtualNode>
+  <fogAdlModel:VirtualNode name="iotconfig">
+    <attributes value="36">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/iotconfig.yml#|2"/>
+    </attributes>
+    <attributes value="1">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/iotconfig.yml#|3"/>
+    </attributes>
+    <attributes value="556">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/iotconfig.yml#|4"/>
+    </attributes>
+    <attributes value="1">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/iotconfig.yml#|5"/>
+    </attributes>
+    <isInstanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/iotconfig.yml#|0"/>
+    <hostingNode href="platform:/resource/SmartHospital/src/Configuration/adulte-section/iotconfig.yml#|1"/>
+  </fogAdlModel:VirtualNode>
+  <fogAdlModel:VirtualNode name="iotconfig1">
+    <attributes value="37">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/iotconfig1.yml#|2"/>
+    </attributes>
+    <attributes value="14">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/iotconfig1.yml#|3"/>
+    </attributes>
+    <attributes value="556">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/iotconfig1.yml#|4"/>
+    </attributes>
+    <attributes value="1">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/iotconfig1.yml#|5"/>
+    </attributes>
+    <isInstanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/iotconfig1.yml#|0"/>
+    <hostingNode href="platform:/resource/SmartHospital/src/Configuration/adulte-section/iotconfig1.yml#|1"/>
+  </fogAdlModel:VirtualNode>
+  <fogAdlModel:VirtualNode name="tconfig">
+    <attributes value="6">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/tempconfig.yml#|2"/>
+    </attributes>
+    <attributes value="1">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/tempconfig.yml#|3"/>
+    </attributes>
+    <attributes value="122">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/tempconfig.yml#|4"/>
+    </attributes>
+    <attributes value="2">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/tempconfig.yml#|5"/>
+    </attributes>
+    <isInstanceOf href="platform:/resource/SmartHospital/src/Configuration/adulte-section/tempconfig.yml#|0"/>
+    <hostingNode href="platform:/resource/SmartHospital/src/Configuration/adulte-section/tempconfig.yml#|1"/>
+  </fogAdlModel:VirtualNode>
+  <fogAdlModel:VirtualNode name="bandconf0">
+    <attributes value="20">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/babies-section/Bandconf0.yml#|2"/>
+    </attributes>
+    <attributes value="5">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/babies-section/Bandconf0.yml#|3"/>
+    </attributes>
+    <attributes value="665">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/babies-section/Bandconf0.yml#|4"/>
+    </attributes>
+    <isInstanceOf href="platform:/resource/SmartHospital/src/Configuration/babies-section/Bandconf0.yml#|0"/>
+    <hostingNode href="platform:/resource/SmartHospital/src/Configuration/babies-section/Bandconf0.yml#|1"/>
+  </fogAdlModel:VirtualNode>
+  <fogAdlModel:VirtualNode name="bandconf1">
+    <attributes value="27">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/babies-section/Bandconf1.yml#|2"/>
+    </attributes>
+    <attributes value="51">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/babies-section/Bandconf1.yml#|3"/>
+    </attributes>
+    <attributes value="665">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/babies-section/Bandconf1.yml#|4"/>
+    </attributes>
+    <isInstanceOf href="platform:/resource/SmartHospital/src/Configuration/babies-section/Bandconf1.yml#|0"/>
+    <hostingNode href="platform:/resource/SmartHospital/src/Configuration/babies-section/Bandconf1.yml#|1"/>
+  </fogAdlModel:VirtualNode>
+  <fogAdlModel:VirtualNode name="bandconf2">
+    <attributes value="22">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/babies-section/Bandconf2.yml#|2"/>
+    </attributes>
+    <attributes value="5">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/babies-section/Bandconf2.yml#|3"/>
+    </attributes>
+    <attributes value="665">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/babies-section/Bandconf2.yml#|4"/>
+    </attributes>
+    <isInstanceOf href="platform:/resource/SmartHospital/src/Configuration/babies-section/Bandconf2.yml#|0"/>
+    <hostingNode href="platform:/resource/SmartHospital/src/Configuration/babies-section/Bandconf2.yml#|1"/>
+  </fogAdlModel:VirtualNode>
+  <fogAdlModel:VirtualNode name="bpconf">
+    <attributes value="2">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/babies-section/bpconf.yml#|2"/>
+    </attributes>
+    <attributes value="8">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/babies-section/bpconf.yml#|3"/>
+    </attributes>
+    <attributes value="569">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/babies-section/bpconf.yml#|4"/>
+    </attributes>
+    <isInstanceOf href="platform:/resource/SmartHospital/src/Configuration/babies-section/bpconf.yml#|0"/>
+    <hostingNode href="platform:/resource/SmartHospital/src/Configuration/babies-section/bpconf.yml#|1"/>
+  </fogAdlModel:VirtualNode>
+  <fogAdlModel:VirtualNode name="cloudconf">
+    <attributes value="89">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/babies-section/cloudconf.yml#|2"/>
+    </attributes>
+    <attributes value="5">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/babies-section/cloudconf.yml#|3"/>
+    </attributes>
+    <attributes value="544">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/babies-section/cloudconf.yml#|4"/>
+    </attributes>
+    <isInstanceOf href="platform:/resource/SmartHospital/src/Configuration/babies-section/cloudconf.yml#|0"/>
+    <hostingNode href="platform:/resource/SmartHospital/src/Configuration/babies-section/cloudconf.yml#|1"/>
+  </fogAdlModel:VirtualNode>
+  <fogAdlModel:VirtualNode name="cloudconf1">
+    <attributes value="200">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/babies-section/cloudconf1.yml#|2"/>
+    </attributes>
+    <attributes value="55">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/babies-section/cloudconf1.yml#|3"/>
+    </attributes>
+    <attributes value="544">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/babies-section/cloudconf1.yml#|4"/>
+    </attributes>
+    <isInstanceOf href="platform:/resource/SmartHospital/src/Configuration/babies-section/cloudconf1.yml#|0"/>
+    <hostingNode href="platform:/resource/SmartHospital/src/Configuration/babies-section/cloudconf1.yml#|1"/>
+  </fogAdlModel:VirtualNode>
+  <fogAdlModel:VirtualNode name="fogconf0">
+    <attributes value="10">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/babies-section/fogconf0.yml#|2"/>
+    </attributes>
+    <attributes value="54">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/babies-section/fogconf0.yml#|3"/>
+    </attributes>
+    <attributes value="698">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/babies-section/fogconf0.yml#|4"/>
+    </attributes>
+    <isInstanceOf href="platform:/resource/SmartHospital/src/Configuration/babies-section/fogconf0.yml#|0"/>
+    <hostingNode href="platform:/resource/SmartHospital/src/Configuration/babies-section/fogconf0.yml#|1"/>
+  </fogAdlModel:VirtualNode>
+  <fogAdlModel:VirtualNode name="fogconf1">
+    <attributes value="11">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/babies-section/fogconf1.yml#|2"/>
+    </attributes>
+    <attributes value="78">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/babies-section/fogconf1.yml#|3"/>
+    </attributes>
+    <attributes value="698">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/babies-section/fogconf1.yml#|4"/>
+    </attributes>
+    <isInstanceOf href="platform:/resource/SmartHospital/src/Configuration/babies-section/fogconf1.yml#|0"/>
+    <hostingNode href="platform:/resource/SmartHospital/src/Configuration/babies-section/fogconf1.yml#|1"/>
+  </fogAdlModel:VirtualNode>
+  <fogAdlModel:VirtualNode name="glucoseconf">
+    <attributes value="23">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/babies-section/glucoseconf.yml#|2"/>
+    </attributes>
+    <attributes value="13">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/babies-section/glucoseconf.yml#|3"/>
+    </attributes>
+    <attributes value="666">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/babies-section/glucoseconf.yml#|4"/>
+    </attributes>
+    <isInstanceOf href="platform:/resource/SmartHospital/src/Configuration/babies-section/glucoseconf.yml#|0"/>
+    <hostingNode href="platform:/resource/SmartHospital/src/Configuration/babies-section/glucoseconf.yml#|1"/>
+  </fogAdlModel:VirtualNode>
+  <fogAdlModel:VirtualNode name="iotconf1">
+    <attributes value="207">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/babies-section/iotconf0.yml#|2"/>
+    </attributes>
+    <attributes value="23">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/babies-section/iotconf0.yml#|3"/>
+    </attributes>
+    <attributes value="232">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/babies-section/iotconf0.yml#|4"/>
+    </attributes>
+    <isInstanceOf href="platform:/resource/SmartHospital/src/Configuration/babies-section/iotconf0.yml#|0"/>
+    <hostingNode href="platform:/resource/SmartHospital/src/Configuration/babies-section/iotconf0.yml#|1"/>
+  </fogAdlModel:VirtualNode>
+  <fogAdlModel:VirtualNode name="iotconf1">
+    <attributes value="44">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/babies-section/iotconf1.yml#|2"/>
+    </attributes>
+    <attributes value="4">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/babies-section/iotconf1.yml#|3"/>
+    </attributes>
+    <attributes value="232">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/babies-section/iotconf1.yml#|4"/>
+    </attributes>
+    <isInstanceOf href="platform:/resource/SmartHospital/src/Configuration/babies-section/iotconf1.yml#|0"/>
+    <hostingNode href="platform:/resource/SmartHospital/src/Configuration/babies-section/iotconf1.yml#|1"/>
+  </fogAdlModel:VirtualNode>
+  <fogAdlModel:VirtualNode name="tempconf">
+    <attributes value="7">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/babies-section/tempconf.yml#|2"/>
+    </attributes>
+    <attributes value="7">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/babies-section/tempconf.yml#|3"/>
+    </attributes>
+    <attributes value="776">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/babies-section/tempconf.yml#|4"/>
+    </attributes>
+    <isInstanceOf href="platform:/resource/SmartHospital/src/Configuration/babies-section/tempconf.yml#|0"/>
+    <hostingNode href="platform:/resource/SmartHospital/src/Configuration/babies-section/tempconf.yml#|1"/>
+  </fogAdlModel:VirtualNode>
+  <fogAdlModel:VirtualNode name="hpconf">
+    <attributes value="20">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/hpconf.yml#|2"/>
+    </attributes>
+    <attributes value="7">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/hpconf.yml#|3"/>
+    </attributes>
+    <attributes value="111">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/hpconf.yml#|4"/>
+    </attributes>
+    <isInstanceOf href="platform:/resource/SmartHospital/src/Configuration/hpconf.yml#|0"/>
+    <hostingNode href="platform:/resource/SmartHospital/src/Configuration/hpconf.yml#|1"/>
+  </fogAdlModel:VirtualNode>
+  <fogAdlModel:VirtualNode name="Bloodconf">
+    <attributes value="20">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/maternity-section/Bloodconf.yml#|2"/>
+    </attributes>
+    <attributes value="8">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/maternity-section/Bloodconf.yml#|3"/>
+    </attributes>
+    <attributes value="157">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/maternity-section/Bloodconf.yml#|4"/>
+    </attributes>
+    <isInstanceOf href="platform:/resource/SmartHospital/src/Configuration/maternity-section/Bloodconf.yml#|0"/>
+    <hostingNode href="platform:/resource/SmartHospital/src/Configuration/maternity-section/Bloodconf.yml#|1"/>
+  </fogAdlModel:VirtualNode>
+  <fogAdlModel:VirtualNode name="Gluconf">
+    <attributes value="8">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/maternity-section/Gluconf.yml#|2"/>
+    </attributes>
+    <attributes value="8">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/maternity-section/Gluconf.yml#|3"/>
+    </attributes>
+    <attributes value="274">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/maternity-section/Gluconf.yml#|4"/>
+    </attributes>
+    <isInstanceOf href="platform:/resource/SmartHospital/src/Configuration/maternity-section/Gluconf.yml#|0"/>
+    <hostingNode href="platform:/resource/SmartHospital/src/Configuration/maternity-section/Gluconf.yml#|1"/>
+  </fogAdlModel:VirtualNode>
+  <fogAdlModel:VirtualNode name="banconf00">
+    <attributes value="9">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/maternity-section/bandconfig00.yml#|2"/>
+    </attributes>
+    <attributes value="7">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/maternity-section/bandconfig00.yml#|3"/>
+    </attributes>
+    <attributes value="132">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/maternity-section/bandconfig00.yml#|4"/>
+    </attributes>
+    <isInstanceOf href="platform:/resource/SmartHospital/src/Configuration/maternity-section/bandconfig00.yml#|0"/>
+    <hostingNode href="platform:/resource/SmartHospital/src/Configuration/maternity-section/bandconfig00.yml#|1"/>
+  </fogAdlModel:VirtualNode>
+  <fogAdlModel:VirtualNode name="banconf01">
+    <attributes value="9">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/maternity-section/bandconfig01.yml#|2"/>
+    </attributes>
+    <attributes value="6">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/maternity-section/bandconfig01.yml#|3"/>
+    </attributes>
+    <attributes value="132">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/maternity-section/bandconfig01.yml#|4"/>
+    </attributes>
+    <isInstanceOf href="platform:/resource/SmartHospital/src/Configuration/maternity-section/bandconfig01.yml#|0"/>
+    <hostingNode href="platform:/resource/SmartHospital/src/Configuration/maternity-section/bandconfig01.yml#|1"/>
+  </fogAdlModel:VirtualNode>
+  <fogAdlModel:VirtualNode name="banconf02">
+    <attributes value="9">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/maternity-section/bandconfig02.yml#|2"/>
+    </attributes>
+    <attributes value="6">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/maternity-section/bandconfig02.yml#|3"/>
+    </attributes>
+    <attributes value="132">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/maternity-section/bandconfig02.yml#|4"/>
+    </attributes>
+    <isInstanceOf href="platform:/resource/SmartHospital/src/Configuration/maternity-section/bandconfig02.yml#|0"/>
+    <hostingNode href="platform:/resource/SmartHospital/src/Configuration/maternity-section/bandconfig02.yml#|1"/>
+  </fogAdlModel:VirtualNode>
+  <fogAdlModel:VirtualNode name="cloud00">
+    <attributes value="208">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/maternity-section/cloud00.yml#|2"/>
+    </attributes>
+    <attributes value="84">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/maternity-section/cloud00.yml#|3"/>
+    </attributes>
+    <attributes value="151">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/maternity-section/cloud00.yml#|4"/>
+    </attributes>
+    <isInstanceOf href="platform:/resource/SmartHospital/src/Configuration/maternity-section/cloud00.yml#|0"/>
+    <hostingNode href="platform:/resource/SmartHospital/src/Configuration/maternity-section/cloud00.yml#|1"/>
+  </fogAdlModel:VirtualNode>
+  <fogAdlModel:VirtualNode name="cloud01">
+    <attributes value="208">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/maternity-section/cloud01.yml#|2"/>
+    </attributes>
+    <attributes value="84">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/maternity-section/cloud01.yml#|3"/>
+    </attributes>
+    <attributes value="151">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/maternity-section/cloud01.yml#|4"/>
+    </attributes>
+    <isInstanceOf href="platform:/resource/SmartHospital/src/Configuration/maternity-section/cloud01.yml#|0"/>
+    <hostingNode href="platform:/resource/SmartHospital/src/Configuration/maternity-section/cloud01.yml#|1"/>
+  </fogAdlModel:VirtualNode>
+  <fogAdlModel:VirtualNode name="fogconf0">
+    <attributes value="10">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/maternity-section/fogconf0.yml#|2"/>
+    </attributes>
+    <attributes value="8">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/maternity-section/fogconf0.yml#|3"/>
+    </attributes>
+    <attributes value="241">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/maternity-section/fogconf0.yml#|4"/>
+    </attributes>
+    <isInstanceOf href="platform:/resource/SmartHospital/src/Configuration/maternity-section/fogconf0.yml#|0"/>
+    <hostingNode href="platform:/resource/SmartHospital/src/Configuration/maternity-section/fogconf0.yml#|1"/>
+  </fogAdlModel:VirtualNode>
+  <fogAdlModel:VirtualNode name="fogconf01">
+    <attributes value="20">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/maternity-section/fogconf01.yml#|2"/>
+    </attributes>
+    <attributes value="8">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/maternity-section/fogconf01.yml#|3"/>
+    </attributes>
+    <attributes value="241">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/maternity-section/fogconf01.yml#|4"/>
+    </attributes>
+    <isInstanceOf href="platform:/resource/SmartHospital/src/Configuration/maternity-section/fogconf01.yml#|0"/>
+    <hostingNode href="platform:/resource/SmartHospital/src/Configuration/maternity-section/fogconf01.yml#|1"/>
+  </fogAdlModel:VirtualNode>
+  <fogAdlModel:VirtualNode name="hopconfiguration">
+    <attributes value="20">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/maternity-section/hopconfiguration.yml#|2"/>
+    </attributes>
+    <attributes value="8">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/maternity-section/hopconfiguration.yml#|3"/>
+    </attributes>
+    <attributes value="255">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/maternity-section/hopconfiguration.yml#|4"/>
+    </attributes>
+    <isInstanceOf href="platform:/resource/SmartHospital/src/Configuration/maternity-section/hopconfiguration.yml#|0"/>
+    <hostingNode href="platform:/resource/SmartHospital/src/Configuration/maternity-section/hopconfiguration.yml#|1"/>
+  </fogAdlModel:VirtualNode>
+  <fogAdlModel:VirtualNode name="iotconf00">
+    <attributes value="20">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/maternity-section/iotconf00.yml#|2"/>
+    </attributes>
+    <attributes value="8">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/maternity-section/iotconf00.yml#|3"/>
+    </attributes>
+    <attributes value="239">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/maternity-section/iotconf00.yml#|4"/>
+    </attributes>
+    <isInstanceOf href="platform:/resource/SmartHospital/src/Configuration/maternity-section/iotconf00.yml#|0"/>
+    <hostingNode href="platform:/resource/SmartHospital/src/Configuration/maternity-section/iotconf00.yml#|1"/>
+  </fogAdlModel:VirtualNode>
+  <fogAdlModel:VirtualNode name="iotconf01">
+    <attributes value="20">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/maternity-section/iotconf01.yml#|2"/>
+    </attributes>
+    <attributes value="8">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/maternity-section/iotconf01.yml#|3"/>
+    </attributes>
+    <attributes value="239">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/maternity-section/iotconf01.yml#|4"/>
+    </attributes>
+    <isInstanceOf href="platform:/resource/SmartHospital/src/Configuration/maternity-section/iotconf01.yml#|0"/>
+    <hostingNode href="platform:/resource/SmartHospital/src/Configuration/maternity-section/iotconf01.yml#|1"/>
+  </fogAdlModel:VirtualNode>
+  <fogAdlModel:VirtualNode name="temperatureconf">
+    <attributes value="17">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/maternity-section/temperatureconf.yml#|2"/>
+    </attributes>
+    <attributes value="5">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/maternity-section/temperatureconf.yml#|3"/>
+    </attributes>
+    <attributes value="578">
+      <instanceOf href="platform:/resource/SmartHospital/src/Configuration/maternity-section/temperatureconf.yml#|4"/>
+    </attributes>
+    <isInstanceOf href="platform:/resource/SmartHospital/src/Configuration/maternity-section/temperatureconf.yml#|0"/>
+    <hostingNode href="platform:/resource/SmartHospital/src/Configuration/maternity-section/temperatureconf.yml#|1"/>
+  </fogAdlModel:VirtualNode>
+  <fogAdlModel:AttributeType name="connecteddevices" valueType="float"/>
+  <fogAdlModel:PhysicalNodeSpecification name="bandphys">
+    <constraints>
+      <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="CpuCores"/>
+      <expression xsi:type="fogAdlModel:IntegerValueExpression" value="55"/>
+    </constraints>
+  </fogAdlModel:PhysicalNodeSpecification>
+  <fogAdlModel:VirtualNodeSpecification name="BandwidthNode2" imageName="imgy" imageRegistry="gitlab">
+    <tags key="securityLocation" value="High"/>
+    <tags key="impact" value="A"/>
+    <downloadLink name="L667204">
+      <tags key="security" value="High"/>
+      <tags key="decryption" value="onlybyKey"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression" value="Wifi"/>
+      </constraints>
+    </downloadLink>
+    <downloadLink name="L667203">
+      <tags key="security" value="High"/>
+      <tags key="decryption" value="onlybyKey"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression" value="Wifi"/>
+      </constraints>
+    </downloadLink>
+    <downloadLink name="L667205">
+      <tags key="security" value="High"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression" value="Wifi"/>
+      </constraints>
+    </downloadLink>
+    <uploadLink name="L667206">
+      <tags key="security" value="High"/>
+      <tags key="encryption" value="obligated"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression" value="Wifi"/>
+      </constraints>
+    </uploadLink>
+  </fogAdlModel:VirtualNodeSpecification>
+  <fogAdlModel:PhysicalNodeSpecification name="BloodEvent">
+    <constraints>
+      <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="CpuCores"/>
+      <expression xsi:type="fogAdlModel:IntegerValueExpression" value="55"/>
+    </constraints>
+  </fogAdlModel:PhysicalNodeSpecification>
+  <fogAdlModel:VirtualNodeSpecification name="bloodPn" imageName="bloodimage" imageRegistry="gitlab">
+    <tags key="securityLocation" value="veryHigh"/>
+    <tags key="impact" value="A"/>
+    <downloadLink name="L123457">
+      <tags key="security" value="High"/>
+      <tags key="decryption" value="onlybyKey"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression" value="Wifi"/>
+      </constraints>
+    </downloadLink>
+    <uploadLink name="L667205">
+      <tags key="security" value="High"/>
+      <tags key="decryption" value="onlybyKey"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression" value="Wifi"/>
+      </constraints>
+    </uploadLink>
+  </fogAdlModel:VirtualNodeSpecification>
+  <fogAdlModel:PhysicalNodeSpecification name="datacenter2">
+    <tags key="securityLocation" value="High"/>
+    <tags key="impact" value="A"/>
+    <constraints>
+      <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="operatingSystem"/>
+      <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="Linux"/>
+    </constraints>
+    <constraints operator="Lesser">
+      <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="totalCost"/>
+      <expression xsi:type="fogAdlModel:IntegerValueExpression" value="1"/>
+    </constraints>
+    <downloadLink name="L36376">
+      <tags key="security" value="High"/>
+      <tags key="decryption" value="onlybyKey"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression"/>
+      </constraints>
+    </downloadLink>
+    <uploadLink name="L35384">
+      <tags key="security" value="High"/>
+      <tags key="encryption" value="obligated"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression"/>
+      </constraints>
+    </uploadLink>
+    <uploadLink name="L36347">
+      <tags key="security" value="High"/>
+      <tags key="encryption" value="obligated"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression"/>
+      </constraints>
+    </uploadLink>
+  </fogAdlModel:PhysicalNodeSpecification>
+  <fogAdlModel:PhysicalNodeSpecification name="fog2">
+    <constraints>
+      <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="CpuCores"/>
+      <expression xsi:type="fogAdlModel:IntegerValueExpression" value="55"/>
+    </constraints>
+  </fogAdlModel:PhysicalNodeSpecification>
+  <fogAdlModel:VirtualNodeSpecification name="Fognode22" imageName="im0" imageRegistry="gitlab">
+    <tags key="securityLocation" value="High"/>
+    <tags key="impact" value="A"/>
+    <downloadLink name="L667206">
+      <tags key="security" value="High"/>
+      <tags key="decryption" value="onlybyKey"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression" value="Wifi"/>
+      </constraints>
+    </downloadLink>
+    <downloadLink name="L35384">
+      <tags key="security" value="High"/>
+      <tags key="decryption" value="onlybyKey"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression"/>
+      </constraints>
+    </downloadLink>
+    <uploadLink name="L36376">
+      <tags key="security" value="High"/>
+      <tags key="encryption" value="obligated"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression"/>
+      </constraints>
+    </uploadLink>
+    <uploadLink name="L667207">
+      <tags key="security" value="High"/>
+      <tags key="encryption" value="obligated"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression" value="Wifi"/>
+      </constraints>
+    </uploadLink>
+    <uploadLink name="L0667217">
+      <tags key="security" value="High"/>
+      <tags key="encryption" value="obligated"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression" value="Wifi"/>
+      </constraints>
+    </uploadLink>
+  </fogAdlModel:VirtualNodeSpecification>
+  <fogAdlModel:VirtualNodeSpecification name="glucosenode" imageName="glucoseimage" imageRegistry="gitlab">
+    <tags key="securityLocation" value="High"/>
+    <tags key="impact" value="A"/>
+    <downloadLink name="L123456">
+      <tags key="security" value="High"/>
+      <tags key="decryption" value="onlybyKey"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression" value="Wifi"/>
+      </constraints>
+    </downloadLink>
+    <uploadLink name="L667204">
+      <tags key="security" value="High"/>
+      <tags key="decryption" value="onlybyKey"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression" value="Wifi"/>
+      </constraints>
+    </uploadLink>
+  </fogAdlModel:VirtualNodeSpecification>
+  <fogAdlModel:PhysicalNodeSpecification name="glucoseEvent">
+    <constraints>
+      <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="CpuCores"/>
+      <expression xsi:type="fogAdlModel:IntegerValueExpression" value="55"/>
+    </constraints>
+  </fogAdlModel:PhysicalNodeSpecification>
+  <fogAdlModel:PhysicalNodeSpecification name="admin22">
+    <tags key="Place" value="hospital"/>
+    <tags key="securityLocation" value="moderate"/>
+    <tags key="impact" value="B"/>
+    <downloadLink name="L667207">
+      <tags key="security" value="moderate"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression" value="Wifi"/>
+      </constraints>
+    </downloadLink>
+  </fogAdlModel:PhysicalNodeSpecification>
+  <fogAdlModel:PhysicalNodeSpecification name="admin122">
+    <tags key="Place" value="hospital"/>
+    <tags key="securityLocation" value="moderate"/>
+    <tags key="impact" value="B"/>
+    <downloadLink name="L667217">
+      <tags key="security" value="moderate"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression" value="Wifi"/>
+      </constraints>
+    </downloadLink>
+  </fogAdlModel:PhysicalNodeSpecification>
+  <fogAdlModel:PhysicalNodeSpecification name="tempEvent">
+    <constraints>
+      <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="CpuCores"/>
+      <expression xsi:type="fogAdlModel:IntegerValueExpression" value="55"/>
+    </constraints>
+  </fogAdlModel:PhysicalNodeSpecification>
+  <fogAdlModel:VirtualNodeSpecification name="tempn" imageName="tempimage" imageRegistry="gitlab">
+    <tags key="securityLocation" value="High"/>
+    <tags key="impact" value="A"/>
+    <downloadLink name="L123458">
+      <tags key="security" value="High"/>
+      <tags key="decryption" value="onlybyKey"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression" value="Wifi"/>
+      </constraints>
+    </downloadLink>
+    <uploadLink name="L667203">
+      <tags key="security" value="High"/>
+      <tags key="decryption" value="onlybyKey"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression" value="Wifi"/>
+      </constraints>
+    </uploadLink>
+  </fogAdlModel:VirtualNodeSpecification>
+  <fogAdlModel:AttributeType name="authorizedToken" valueType="float"/>
+  <fogAdlModel:VirtualNode name="BandGlucose">
+    <isInstanceOf href="platform:/resource/SmartHospital/src/bandwidthconfig.yml#|0"/>
+    <hostingNode href="platform:/resource/SmartHospital/src/bandwidthconfig.yml#|1"/>
+  </fogAdlModel:VirtualNode>
+  <fogAdlModel:PhysicalNodeSpecification name="hospdata">
+    <tags key="securityLocation" value="veryHigh"/>
+    <tags key="accessibility" value="Private"/>
+    <tags key="authentication" value="on"/>
+    <tags key="impact" value="A"/>
+  </fogAdlModel:PhysicalNodeSpecification>
+  <fogAdlModel:AttributeType name="intrusionDetection" valueType="float"/>
+  <fogAdlModel:AttributeType name="timeleft" valueType="float"/>
+  <fogAdlModel:VirtualNodeSpecification name="website" imageName="kub" imageRegistry="gitlab">
+    <tags key="securityLocation" value="low"/>
+    <tags key="accessibility" value="Public"/>
+    <tags key="authentication" value="on"/>
+    <tags key="impact" value="C"/>
+    <downloadLink name="L36345">
+      <tags key="security" value="High"/>
+      <tags key="decryption" value="onlybyKey"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression"/>
+      </constraints>
+    </downloadLink>
+    <downloadLink name="L36346">
+      <tags key="security" value="High"/>
+      <tags key="decryption" value="onlybyKey"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression"/>
+      </constraints>
+    </downloadLink>
+    <downloadLink name="L36347">
+      <tags key="security" value="High"/>
+      <tags key="decryption" value="onlybyKey"/>
+      <constraints>
+        <expression xsi:type="fogAdlModel:AttributeExpression" attributeName="networkClass"/>
+        <expression xsi:type="fogAdlModel:NetworkClassExpression"/>
+      </constraints>
+    </downloadLink>
+  </fogAdlModel:VirtualNodeSpecification>
+</xmi:XMI>

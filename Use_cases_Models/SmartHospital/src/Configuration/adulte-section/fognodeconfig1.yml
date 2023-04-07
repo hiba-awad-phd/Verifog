@@ -1,0 +1,11 @@
+ApiVersion:v.0.1
+resourceType: VirtualNode
+metadata:
+id: fogconfig1 //bandwidthnode
+tags:
+instanceOf:Fognode1
+status:
+hostedOn:fogconfig1
+hosts:
+
+authorityLevelChecking: 5

@@ -1,0 +1,15 @@
+ApiVersion:v.0.1
+resourceType:PhysicalNode
+metadata:
+id: cloud
+tags: 
+
+  - greenEnergy: null
+
+  - SourceEnergy: Oil
+  Spec:
+  physicalResources:
+  networkLinks:
+  downloadLink:
+  
+  uploadLink:

@@ -1,0 +1,26 @@
+ApiVersion:v.0.1
+resourceType: PhysicalNode
+metadata:
+  
+  id: admin12
+  tags: 
+  - Place: hospital
+  - securityLocation: moderate
+  - impact: B
+
+Spec:
+   physicalResources:
+     networkLinks:
+       downloadLink:  
+         -metadata:
+          
+           id: L080911
+           tags:
+             - security: moderate
+          Spec:
+            constraints:
+            - networkClass: Wifi
+            networks:
+              sourceNetworks: 
+              - MyNetwork001
+           uploadLink:
