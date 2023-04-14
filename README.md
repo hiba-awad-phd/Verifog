@@ -18,7 +18,6 @@ VeriFog: A Generic Model-based Approach for Verifying Fog Systems at Design Time
 - In your workspace, import all the Use_cases_Models folders.
 
 > **Prepare your XMI Models**
-
 > In your workspace:
 > - Right-click on any file in the specific use case folder -> SeMaFoR -> Save the Model
 > - A message of the path will appear in the first eclipse window.
@@ -33,6 +32,7 @@ The results will appear in the first eclipse window
 
 ### OCL code
 *To use the existing OCL queries in Models_Tools/Queries/OCL you need to follow the tutorial https://help.eclipse.org/latest/index.jsp?topic=%2Forg.eclipse.ocl.doc%2Fhelp%2FTutorials.html to convert your ecore to OCL project.*
+
 **You need to use the models with .xmi extensions.**
 
 - Import your xmi model in fr.imta.semafor.fogAdlModel/src/fr/imta/model/ 
