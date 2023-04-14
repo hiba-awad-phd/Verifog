@@ -32,12 +32,8 @@ The results will appear in the first eclipse window
 
 ### OCL code
 To use the existing OCL queries in Models_Tools/Queries/OCL you need to follow the tutorial https://help.eclipse.org/latest/index.jsp?topic=%2Forg.eclipse.ocl.doc%2Fhelp%2FTutorials.html to convert your ecore to OCL project.
-AND you need to use the models with .xmi extensions.
-#### XMI Models
+**You need to use the models with .xmi extensions.**
 
-In your workspace, right click on any file in the specific use case folder -> SeMaFoR -> Save the Model
-A message of the path will appear in the first eclipse window.
-The model will be saved with .fog extension, you must replace it by .xmi
 
 - Import your new xmi model in fr.imta.semafor.fogAdlModel/src/fr/imta/model/ 
 - Open it with xmi view
