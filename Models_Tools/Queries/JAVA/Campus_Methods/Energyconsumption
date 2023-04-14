@@ -1,0 +1,37 @@
+	public void energylimitation(ResourceSet s) {
+		double minus, somme = 0;
+		double energymax = 30000;
+		HashMap<String, Double> Energy = new HashMap<String, Double>();
+
+		for (Attribute at : IterableExtensions.filter(IteratorExtensions.toIterable(s.getAllContents()),
+				Attribute.class)) {
+
+			if (at.getInstanceOf().getName().contains("energy_consumption")) {
+				Energy.put(at.getFogresource().getName(), Double.parseDouble(at.getValue()));
+			}
+
+			for (double f : Energy.values()) {
+				somme += f;
+
+			}
+		}
+		minus = Math.abs(somme - energymax);
+		if (somme >= energymax) {
+			Double max = Collections.max(Energy.values());
+			System.out.println("You crossed your limits by " + minus + "!!");
+			for (Entry<String, Double> entry : Energy.entrySet()) {
+
+				// if give value is equal to value from entry
+				// print the corresponding key
+				if (entry.getValue() == max) {
+					System.out.println("The most consumed node is " + entry.getKey() + "with the energy_consumption = "
+							+ entry.getValue());
+
+					break;
+				}
+			}
+
+		} else
+			System.out.println("You still have " + minus + " to attend your threshold");
+
+	}

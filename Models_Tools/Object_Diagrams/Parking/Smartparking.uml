@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_eDszQLKvEe2PMPdly4NOSA" name="model2">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_eERbALKvEe2PMPdly4NOSA">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Ru7SILKzEe2PMPdly4NOSA" name="node">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_VriRoLKzEe2PMPdly4NOSA" name="id"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_XfW_sLKzEe2PMPdly4NOSA" name="detection_quality"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_tMqI0NgyEe2b_80WDRCYdw" name="coveredPlaces"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_SWExsLKzEe2PMPdly4NOSA" name="confignode">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_fi8boLKzEe2PMPdly4NOSA" name="id"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_gHhvYLKzEe2PMPdly4NOSA" name="image_quality"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_gdQHwLKzEe2PMPdly4NOSA" name="detected_cars"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_YB4ogLK0Ee2PMPdly4NOSA" name="cloudServer: VirtualNode"/>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_YiPjkLK0Ee2PMPdly4NOSA" name="proxy: VirtualNodeSpecification"/>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_Y-go0LK0Ee2PMPdly4NOSA" name="microcontroller:VirtualNodeSpecification"/>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_aPRtILK0Ee2PMPdly4NOSA" name="cameraHighResolution: PhysicalNodeSpecification">
+    <slot xmi:type="uml:Slot" xmi:id="_65aj4LK7Ee2PMPdly4NOSA" definingFeature="_XfW_sLKzEe2PMPdly4NOSA">
+      <value xmi:type="uml:LiteralString" xmi:id="_WtvvwLNnEe2F7tQjDHEGQQ" value="veryhigh"/>
+    </slot>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_anf_4LK0Ee2PMPdly4NOSA" name="cameraMediumResolution: PhysicalNodeSpecification">
+    <slot xmi:type="uml:Slot" xmi:id="_6RUCELK7Ee2PMPdly4NOSA" definingFeature="_XfW_sLKzEe2PMPdly4NOSA">
+      <value xmi:type="uml:LiteralString" xmi:id="_S2TkILNnEe2F7tQjDHEGQQ" value="moderate"/>
+    </slot>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_d_hroLK0Ee2PMPdly4NOSA" name="cloud:VirtualNodeSpecification"/>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_ImFzcLK1Ee2PMPdly4NOSA" name="fognode1:VirtualNodeSpecification"/>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_mwNosLK1Ee2PMPdly4NOSA" name="micro1:VirtualNode"/>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_q-VO8LK1Ee2PMPdly4NOSA" name="camera1:PhysicalNode">
+    <slot xmi:type="uml:Slot" xmi:id="_4PbC0LK7Ee2PMPdly4NOSA" definingFeature="_gHhvYLKzEe2PMPdly4NOSA">
+      <value xmi:type="uml:LiteralInteger" xmi:id="_P8TbsLNoEe2F7tQjDHEGQQ" value="60"/>
+    </slot>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_swIjwLK1Ee2PMPdly4NOSA" name="camera2:PhysicalNode">
+    <slot xmi:type="uml:Slot" xmi:id="_5LH2ELK7Ee2PMPdly4NOSA" definingFeature="_gHhvYLKzEe2PMPdly4NOSA">
+      <value xmi:type="uml:LiteralInteger" xmi:id="_M0FtkLNoEe2F7tQjDHEGQQ" value="57"/>
+    </slot>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_zQpDYLK1Ee2PMPdly4NOSA" name="camera5:PhysicalNode">
+    <slot xmi:type="uml:Slot" xmi:id="_-bsX0LK7Ee2PMPdly4NOSA" definingFeature="_gHhvYLKzEe2PMPdly4NOSA">
+      <value xmi:type="uml:LiteralInteger" xmi:id="_AvmA8LNoEe2F7tQjDHEGQQ" value="69"/>
+    </slot>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_zjSSkLK1Ee2PMPdly4NOSA" name="camera4:PhysicalNode">
+    <slot xmi:type="uml:Slot" xmi:id="_8fFhMLK7Ee2PMPdly4NOSA" definingFeature="_gHhvYLKzEe2PMPdly4NOSA">
+      <value xmi:type="uml:LiteralInteger" xmi:id="_D_AjQLNoEe2F7tQjDHEGQQ" value="98"/>
+    </slot>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_zz7WoLK1Ee2PMPdly4NOSA" name="camera3:PhysicalNode">
+    <slot xmi:type="uml:Slot" xmi:id="_7csQELK7Ee2PMPdly4NOSA" definingFeature="_gHhvYLKzEe2PMPdly4NOSA">
+      <value xmi:type="uml:LiteralInteger" xmi:id="_JPCScLNoEe2F7tQjDHEGQQ" value="65"/>
+    </slot>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_0KHpELK1Ee2PMPdly4NOSA" name="micro2:VirtualNode"/>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_0dROkLK1Ee2PMPdly4NOSA" name="fogn2:VirtualNode">
+    <slot xmi:type="uml:Slot" xmi:id="_OerjINgzEe2b_80WDRCYdw" definingFeature="_tMqI0NgyEe2b_80WDRCYdw">
+      <value xmi:type="uml:LiteralInteger" xmi:id="_TluVcNgzEe2b_80WDRCYdw" value="10"/>
+    </slot>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_-5Z2QLK1Ee2PMPdly4NOSA" name="proxyserver:VirtualNode"/>
+  <packagedElement xmi:type="uml:InformationFlow" xmi:id="_WepXULK4Ee2PMPdly4NOSA" informationSource="_zz7WoLK1Ee2PMPdly4NOSA" informationTarget="_0KHpELK1Ee2PMPdly4NOSA"/>
+  <packagedElement xmi:type="uml:InformationFlow" xmi:id="_Xu9vsLK4Ee2PMPdly4NOSA" informationSource="_zjSSkLK1Ee2PMPdly4NOSA" informationTarget="_0KHpELK1Ee2PMPdly4NOSA _eDszQLKvEe2PMPdly4NOSA"/>
+  <packagedElement xmi:type="uml:InformationFlow" xmi:id="_YovQULK4Ee2PMPdly4NOSA" informationSource="_zQpDYLK1Ee2PMPdly4NOSA" informationTarget="_0KHpELK1Ee2PMPdly4NOSA"/>
+  <packagedElement xmi:type="uml:InformationFlow" xmi:id="_6DzR4LK4Ee2PMPdly4NOSA" informationSource="_0KHpELK1Ee2PMPdly4NOSA" informationTarget="_0dROkLK1Ee2PMPdly4NOSA"/>
+  <packagedElement xmi:type="uml:InformationFlow" xmi:id="_9CIEMLK4Ee2PMPdly4NOSA" informationSource="_swIjwLK1Ee2PMPdly4NOSA" informationTarget="_mwNosLK1Ee2PMPdly4NOSA _eDszQLKvEe2PMPdly4NOSA"/>
+  <packagedElement xmi:type="uml:InformationFlow" xmi:id="__q8gkLK4Ee2PMPdly4NOSA" informationSource="_q-VO8LK1Ee2PMPdly4NOSA" informationTarget="_mwNosLK1Ee2PMPdly4NOSA"/>
+  <packagedElement xmi:type="uml:InformationFlow" xmi:id="_B7gN8LK5Ee2PMPdly4NOSA" informationSource="_mwNosLK1Ee2PMPdly4NOSA" informationTarget="_eDszQLKvEe2PMPdly4NOSA _LWSO0NgzEe2b_80WDRCYdw"/>
+  <packagedElement xmi:type="uml:InformationFlow" xmi:id="_Ofq5ILK5Ee2PMPdly4NOSA" informationSource="_LWSO0NgzEe2b_80WDRCYdw" informationTarget="_-5Z2QLK1Ee2PMPdly4NOSA"/>
+  <packagedElement xmi:type="uml:InformationFlow" xmi:id="_Qj6BwLK5Ee2PMPdly4NOSA" informationSource="_0dROkLK1Ee2PMPdly4NOSA" informationTarget="_-5Z2QLK1Ee2PMPdly4NOSA"/>
+  <packagedElement xmi:type="uml:InformationFlow" xmi:id="_RqyxULK5Ee2PMPdly4NOSA" informationSource="_-5Z2QLK1Ee2PMPdly4NOSA" informationTarget="_YB4ogLK0Ee2PMPdly4NOSA"/>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_TNO0cLK5Ee2PMPdly4NOSA" client="_-5Z2QLK1Ee2PMPdly4NOSA" supplier="_YiPjkLK0Ee2PMPdly4NOSA"/>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_UHrqgLK5Ee2PMPdly4NOSA" client="_YB4ogLK0Ee2PMPdly4NOSA" supplier="_d_hroLK0Ee2PMPdly4NOSA"/>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_VZdMkLRHEe2F1vWxxeBGHQ" client="_0dROkLK1Ee2PMPdly4NOSA" supplier="_ImFzcLK1Ee2PMPdly4NOSA"/>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_W4OQoLRHEe2F1vWxxeBGHQ" client="_LWSO0NgzEe2b_80WDRCYdw" supplier="_ImFzcLK1Ee2PMPdly4NOSA"/>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_Y6FasLRHEe2F1vWxxeBGHQ" client="_mwNosLK1Ee2PMPdly4NOSA" supplier="_Y-go0LK0Ee2PMPdly4NOSA"/>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_aBtKELRHEe2F1vWxxeBGHQ" client="_0KHpELK1Ee2PMPdly4NOSA" supplier="_Y-go0LK0Ee2PMPdly4NOSA"/>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_5aEXQLRLEe2F1vWxxeBGHQ" client="_q-VO8LK1Ee2PMPdly4NOSA" supplier="_aPRtILK0Ee2PMPdly4NOSA"/>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_-owpsLRLEe2F1vWxxeBGHQ" client="_swIjwLK1Ee2PMPdly4NOSA" supplier="_aPRtILK0Ee2PMPdly4NOSA"/>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_K-8jQLRMEe2F1vWxxeBGHQ" client="_zz7WoLK1Ee2PMPdly4NOSA" supplier="_anf_4LK0Ee2PMPdly4NOSA"/>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_MTR48LRMEe2F1vWxxeBGHQ" client="_zjSSkLK1Ee2PMPdly4NOSA" supplier="_anf_4LK0Ee2PMPdly4NOSA"/>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_NBTckLRMEe2F1vWxxeBGHQ" client="_zQpDYLK1Ee2PMPdly4NOSA" supplier="_anf_4LK0Ee2PMPdly4NOSA"/>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_LWSO0NgzEe2b_80WDRCYdw" name="fogn1:VirtualNode">
+    <slot xmi:type="uml:Slot" xmi:id="_LsGt0NgzEe2b_80WDRCYdw" definingFeature="_tMqI0NgyEe2b_80WDRCYdw">
+      <value xmi:type="uml:LiteralInteger" xmi:id="_YNaSQNgzEe2b_80WDRCYdw" value="15"/>
+    </slot>
+  </packagedElement>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_W-PPoLKzEe2PMPdly4NOSA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_W-P2sLKzEe2PMPdly4NOSA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+  </profileApplication>
+</uml:Model>

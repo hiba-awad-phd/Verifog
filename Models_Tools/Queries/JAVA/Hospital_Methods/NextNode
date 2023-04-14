@@ -1,0 +1,25 @@
+	public String AvailableNode(ResourceSet s) {
+		String avn = null;
+
+		HashMap<String, String> EnTime = new HashMap<String, String>();
+
+		for (Attribute att : IterableExtensions.filter(IteratorExtensions.toIterable(s.getAllContents()),
+				Attribute.class)) {
+
+			if (att.getInstanceOf().getName().contains("timeleft"))
+				EnTime.put(att.getFogresource().getName(), att.getValue());
+		}
+		String min = Collections.min(EnTime.values());
+		for (Entry<String, String> entry : EnTime.entrySet()) {
+
+			// if give value is equal to value from entry
+			// print the corresponding key
+			if (entry.getValue() == min) {
+				System.out.println("The timeleft is " + min + " for " + entry.getKey());
+				avn = entry.getKey();
+				break;
+			}
+		}
+
+		return avn;
+	}

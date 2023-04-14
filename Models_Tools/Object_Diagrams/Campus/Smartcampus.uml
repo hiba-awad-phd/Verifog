@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_Xs6QULKvEe2PMPdly4NOSA" name="model">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_XtZ_kLKvEe2PMPdly4NOSA">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_sTLM4LKzEe2PMPdly4NOSA" name="Class2">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_FzdJMLK0Ee2PMPdly4NOSA" name="id"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_GX89YLK0Ee2PMPdly4NOSA" name="SourceEnergy"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_MiLrALK0Ee2PMPdly4NOSA" name="greenEnergy"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_sizkULKzEe2PMPdly4NOSA" name="configuration">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_5B4UILKzEe2PMPdly4NOSA" name="id"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_582HkLKzEe2PMPdly4NOSA" name="energy_consumption"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_8Lr9sLKzEe2PMPdly4NOSA" name="green_consumption"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_X_ptsLLREe2PMPdly4NOSA" name="cloud:VirtualNodeSpecification">
+    <slot xmi:type="uml:Slot" xmi:id="_F5iVgLLUEe2PMPdly4NOSA" definingFeature="_GX89YLK0Ee2PMPdly4NOSA">
+      <value xmi:type="uml:LiteralString" xmi:id="_eYHP4LNmEe2F7tQjDHEGQQ" value="Oil"/>
+    </slot>
+    <slot xmi:type="uml:Slot" xmi:id="_GToQgLLUEe2PMPdly4NOSA" definingFeature="_MiLrALK0Ee2PMPdly4NOSA">
+      <value xmi:type="uml:LiteralString" xmi:id="_fikQ0LNmEe2F7tQjDHEGQQ" value="null"/>
+    </slot>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_ZLEX8LLREe2PMPdly4NOSA" name="datacenter1:VirtualNodeSpecification">
+    <slot xmi:type="uml:Slot" xmi:id="_XmuwALLUEe2PMPdly4NOSA" definingFeature="_GX89YLK0Ee2PMPdly4NOSA">
+      <value xmi:type="uml:LiteralString" xmi:id="_fO-1MLNgEe2F7tQjDHEGQQ" value="renewable"/>
+    </slot>
+    <slot xmi:type="uml:Slot" xmi:id="_X9FagLLUEe2PMPdly4NOSA" definingFeature="_MiLrALK0Ee2PMPdly4NOSA">
+      <value xmi:type="uml:LiteralString" xmi:id="_gjCeELNgEe2F7tQjDHEGQQ" value="veryHigh"/>
+    </slot>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_aMO6ALLREe2PMPdly4NOSA" name="datacenter2:VirtualNodeSpecification">
+    <slot xmi:type="uml:Slot" xmi:id="_Hapi8LLUEe2PMPdly4NOSA" definingFeature="_GX89YLK0Ee2PMPdly4NOSA">
+      <value xmi:type="uml:LiteralString" xmi:id="_aDExALNgEe2F7tQjDHEGQQ" value="renewable"/>
+    </slot>
+    <slot xmi:type="uml:Slot" xmi:id="_HlSssLLUEe2PMPdly4NOSA" definingFeature="_MiLrALK0Ee2PMPdly4NOSA">
+      <value xmi:type="uml:LiteralString" xmi:id="_bdZZ8LNgEe2F7tQjDHEGQQ" value="veryHigh"/>
+    </slot>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_bYUSoLLREe2PMPdly4NOSA" name="raspberryPiCluster:PhysicalNodeSpecification">
+    <slot xmi:type="uml:Slot" xmi:id="_G1p_gLLUEe2PMPdly4NOSA" definingFeature="_GX89YLK0Ee2PMPdly4NOSA">
+      <value xmi:type="uml:LiteralString" xmi:id="_ULE0ILNmEe2F7tQjDHEGQQ" value="renewable"/>
+    </slot>
+    <slot xmi:type="uml:Slot" xmi:id="_HCYz8LLUEe2PMPdly4NOSA" definingFeature="_MiLrALK0Ee2PMPdly4NOSA">
+      <value xmi:type="uml:LiteralString" xmi:id="_VX8P4LNmEe2F7tQjDHEGQQ" value="High"/>
+    </slot>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_d_1HcLLREe2PMPdly4NOSA" name="gateway:VirtualNodeSpecification">
+    <slot xmi:type="uml:Slot" xmi:id="_TmkGMLLUEe2PMPdly4NOSA" definingFeature="_GX89YLK0Ee2PMPdly4NOSA">
+      <value xmi:type="uml:LiteralString" xmi:id="_Sks68LNgEe2F7tQjDHEGQQ" value="renewable"/>
+    </slot>
+    <slot xmi:type="uml:Slot" xmi:id="_T3NKQLLUEe2PMPdly4NOSA" definingFeature="_MiLrALK0Ee2PMPdly4NOSA">
+      <value xmi:type="uml:LiteralString" xmi:id="_UFDTYLNgEe2F7tQjDHEGQQ" value="veryHigh"/>
+    </slot>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_lsfRILLREe2PMPdly4NOSA" name="smartwatch:PhysicalNodeSpecification">
+    <slot xmi:type="uml:Slot" xmi:id="_SN6RMLLUEe2PMPdly4NOSA" definingFeature="_GX89YLK0Ee2PMPdly4NOSA">
+      <value xmi:type="uml:LiteralString" xmi:id="_wcrokLNmEe2F7tQjDHEGQQ" value="renewable"/>
+    </slot>
+    <slot xmi:type="uml:Slot" xmi:id="_SlK6oLLUEe2PMPdly4NOSA" definingFeature="_MiLrALK0Ee2PMPdly4NOSA">
+      <value xmi:type="uml:LiteralString" xmi:id="_x7nEsLNmEe2F7tQjDHEGQQ" value="moderate"/>
+    </slot>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_nSfloLLREe2PMPdly4NOSA" name="computer:PhysicalNodeSpecification">
+    <slot xmi:type="uml:Slot" xmi:id="_PLqBILLUEe2PMPdly4NOSA" definingFeature="_GX89YLK0Ee2PMPdly4NOSA">
+      <value xmi:type="uml:LiteralString" xmi:id="_auOYELNmEe2F7tQjDHEGQQ" value="Petroleum"/>
+    </slot>
+    <slot xmi:type="uml:Slot" xmi:id="_PgzxwLLUEe2PMPdly4NOSA" definingFeature="_MiLrALK0Ee2PMPdly4NOSA">
+      <value xmi:type="uml:LiteralString" xmi:id="_b7gDgLNmEe2F7tQjDHEGQQ" value="low"/>
+    </slot>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_ppQosLLREe2PMPdly4NOSA" name="alarmDevice:PhysicalNodeSpecification">
+    <slot xmi:type="uml:Slot" xmi:id="_NOyr0LLUEe2PMPdly4NOSA" definingFeature="_GX89YLK0Ee2PMPdly4NOSA">
+      <value xmi:type="uml:LiteralString" xmi:id="_os9j0LNmEe2F7tQjDHEGQQ" value="Oil"/>
+    </slot>
+    <slot xmi:type="uml:Slot" xmi:id="_NhflYLLUEe2PMPdly4NOSA" definingFeature="_MiLrALK0Ee2PMPdly4NOSA">
+      <value xmi:type="uml:LiteralString" xmi:id="_p82eYLNmEe2F7tQjDHEGQQ" value="low"/>
+    </slot>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_qYOAcLLREe2PMPdly4NOSA" name="mobilePhone:PhysicalNodeSpecification">
+    <slot xmi:type="uml:Slot" xmi:id="_OGqvALLUEe2PMPdly4NOSA" definingFeature="_GX89YLK0Ee2PMPdly4NOSA">
+      <value xmi:type="uml:LiteralString" xmi:id="_jw9LkLNgEe2F7tQjDHEGQQ" value="renewable"/>
+    </slot>
+    <slot xmi:type="uml:Slot" xmi:id="_OY5HcLLUEe2PMPdly4NOSA" definingFeature="_MiLrALK0Ee2PMPdly4NOSA">
+      <value xmi:type="uml:LiteralString" xmi:id="_k0sggLNgEe2F7tQjDHEGQQ" value="moderate"/>
+    </slot>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_r_2FkLLREe2PMPdly4NOSA" name="wifiCamera:PhysicalNodeSpecification">
+    <slot xmi:type="uml:Slot" xmi:id="_Iu6AILLUEe2PMPdly4NOSA" definingFeature="_GX89YLK0Ee2PMPdly4NOSA">
+      <value xmi:type="uml:LiteralString" xmi:id="_jfKCMLNmEe2F7tQjDHEGQQ" value="Petroleum"/>
+    </slot>
+    <slot xmi:type="uml:Slot" xmi:id="_I8dT8LLUEe2PMPdly4NOSA" definingFeature="_MiLrALK0Ee2PMPdly4NOSA">
+      <value xmi:type="uml:LiteralString" xmi:id="_klYqcLNmEe2F7tQjDHEGQQ" value="low"/>
+    </slot>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_QKzb4LLSEe2PMPdly4NOSA" name="center1:VirtualNode">
+    <slot xmi:type="uml:Slot" xmi:id="_WmGZcLLUEe2PMPdly4NOSA" definingFeature="_582HkLKzEe2PMPdly4NOSA">
+      <value xmi:type="uml:LiteralReal" xmi:id="_drwkYLNfEe2F7tQjDHEGQQ" value="60.0"/>
+    </slot>
+    <slot xmi:type="uml:Slot" xmi:id="_W4cGoLLUEe2PMPdly4NOSA" definingFeature="_8Lr9sLKzEe2PMPdly4NOSA">
+      <value xmi:type="uml:LiteralReal" xmi:id="_e5aqULNfEe2F7tQjDHEGQQ" value="60.0"/>
+    </slot>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_QirwYLLSEe2PMPdly4NOSA" name="gate:VirtualNode">
+    <slot xmi:type="uml:Slot" xmi:id="_VVDoULLUEe2PMPdly4NOSA" definingFeature="_582HkLKzEe2PMPdly4NOSA">
+      <value xmi:type="uml:LiteralReal" xmi:id="_R3dP4LNfEe2F7tQjDHEGQQ" value="40.0"/>
+    </slot>
+    <slot xmi:type="uml:Slot" xmi:id="_VmeIcLLUEe2PMPdly4NOSA" definingFeature="_8Lr9sLKzEe2PMPdly4NOSA">
+      <value xmi:type="uml:LiteralReal" xmi:id="_ToGHELNfEe2F7tQjDHEGQQ" value="30.0"/>
+    </slot>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_Q1msYLLSEe2PMPdly4NOSA" name="publicCloudProvider:VirtualNode">
+    <slot xmi:type="uml:Slot" xmi:id="_UcKRcLLUEe2PMPdly4NOSA" definingFeature="_582HkLKzEe2PMPdly4NOSA">
+      <value xmi:type="uml:LiteralReal" xmi:id="_j9iEcLNfEe2F7tQjDHEGQQ" value="60.0"/>
+    </slot>
+    <slot xmi:type="uml:Slot" xmi:id="_UuleMLLUEe2PMPdly4NOSA" definingFeature="_8Lr9sLKzEe2PMPdly4NOSA">
+      <value xmi:type="uml:LiteralReal" xmi:id="_k_t6MLNfEe2F7tQjDHEGQQ" value="56.0"/>
+    </slot>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_RSNI0LLSEe2PMPdly4NOSA" name="cluster:PhysicalNode">
+    <slot xmi:type="uml:Slot" xmi:id="_Klu-4LLUEe2PMPdly4NOSA" definingFeature="_582HkLKzEe2PMPdly4NOSA">
+      <value xmi:type="uml:LiteralReal" xmi:id="_1oQZwLNfEe2F7tQjDHEGQQ" value="120.0"/>
+    </slot>
+    <slot xmi:type="uml:Slot" xmi:id="_K4bRYLLUEe2PMPdly4NOSA" definingFeature="_MiLrALK0Ee2PMPdly4NOSA">
+      <value xmi:type="uml:LiteralReal" xmi:id="_2xpqwLNfEe2F7tQjDHEGQQ" value="106.0"/>
+    </slot>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_Rig1sLLSEe2PMPdly4NOSA" name="center2:VirtualNode">
+    <slot xmi:type="uml:Slot" xmi:id="_LZD5QLLUEe2PMPdly4NOSA" definingFeature="_582HkLKzEe2PMPdly4NOSA">
+      <value xmi:type="uml:LiteralReal" xmi:id="_Yi-ssLNfEe2F7tQjDHEGQQ" value="60.0"/>
+    </slot>
+    <slot xmi:type="uml:Slot" xmi:id="_Lp-DELLUEe2PMPdly4NOSA" definingFeature="_8Lr9sLKzEe2PMPdly4NOSA">
+      <value xmi:type="uml:LiteralReal" xmi:id="_aGg8ALNfEe2F7tQjDHEGQQ" value="53.0"/>
+    </slot>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_R8YHMLLSEe2PMPdly4NOSA" name="cam:PhysicalNode">
+    <slot xmi:type="uml:Slot" xmi:id="_IBECsLLUEe2PMPdly4NOSA" definingFeature="_582HkLKzEe2PMPdly4NOSA">
+      <value xmi:type="uml:LiteralReal" xmi:id="_Dl29ELNgEe2F7tQjDHEGQQ" value="55.0"/>
+    </slot>
+    <slot xmi:type="uml:Slot" xmi:id="_IRj80LLUEe2PMPdly4NOSA" definingFeature="_8Lr9sLKzEe2PMPdly4NOSA">
+      <value xmi:type="uml:LiteralReal" xmi:id="_EvOY4LNgEe2F7tQjDHEGQQ" value="50.0"/>
+    </slot>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_SO8d4LLSEe2PMPdly4NOSA" name="mobile:PhysicalNode">
+    <slot xmi:type="uml:Slot" xmi:id="_J1ra8LLUEe2PMPdly4NOSA" definingFeature="_582HkLKzEe2PMPdly4NOSA">
+      <value xmi:type="uml:LiteralReal" xmi:id="_6RUPkLNfEe2F7tQjDHEGQQ" value="120.0"/>
+    </slot>
+    <slot xmi:type="uml:Slot" xmi:id="_KGKG8LLUEe2PMPdly4NOSA" definingFeature="_8Lr9sLKzEe2PMPdly4NOSA">
+      <value xmi:type="uml:LiteralReal" xmi:id="_7uafsLNfEe2F7tQjDHEGQQ" value="111.0"/>
+    </slot>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_ShaG4LLSEe2PMPdly4NOSA" name="alarm:PhysicalNode">
+    <slot xmi:type="uml:Slot" xmi:id="_MMwAALLUEe2PMPdly4NOSA" definingFeature="_582HkLKzEe2PMPdly4NOSA">
+      <value xmi:type="uml:LiteralReal" xmi:id="_IkWQULNgEe2F7tQjDHEGQQ" value="60.0"/>
+    </slot>
+    <slot xmi:type="uml:Slot" xmi:id="_MgdmMLLUEe2PMPdly4NOSA" definingFeature="_8Lr9sLKzEe2PMPdly4NOSA">
+      <value xmi:type="uml:LiteralReal" xmi:id="_JkWUwLNgEe2F7tQjDHEGQQ" value="50.0"/>
+    </slot>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_TCieALLSEe2PMPdly4NOSA" name="comp:PhysicalNode">
+    <slot xmi:type="uml:Slot" xmi:id="_QK7FwLLUEe2PMPdly4NOSA" definingFeature="_582HkLKzEe2PMPdly4NOSA">
+      <value xmi:type="uml:LiteralReal" xmi:id="_w2vykLNfEe2F7tQjDHEGQQ" value="60.0"/>
+    </slot>
+    <slot xmi:type="uml:Slot" xmi:id="_QgTf4LLUEe2PMPdly4NOSA" definingFeature="_8Lr9sLKzEe2PMPdly4NOSA">
+      <value xmi:type="uml:LiteralReal" xmi:id="_x4zsgLNfEe2F7tQjDHEGQQ" value="54.0"/>
+    </slot>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_TcG0kLLSEe2PMPdly4NOSA" name="watch:PhysicalNode">
+    <slot xmi:type="uml:Slot" xmi:id="_RNlcoLLUEe2PMPdly4NOSA" definingFeature="_582HkLKzEe2PMPdly4NOSA">
+      <value xmi:type="uml:LiteralReal" xmi:id="_-67fALNfEe2F7tQjDHEGQQ" value="80.0"/>
+    </slot>
+    <slot xmi:type="uml:Slot" xmi:id="_RjeNELLUEe2PMPdly4NOSA" definingFeature="_8Lr9sLKzEe2PMPdly4NOSA">
+      <value xmi:type="uml:LiteralReal" xmi:id="__6HrILNfEe2F7tQjDHEGQQ" value="77.0"/>
+    </slot>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_w37ZYLLSEe2PMPdly4NOSA" client="_Q1msYLLSEe2PMPdly4NOSA" supplier="_X_ptsLLREe2PMPdly4NOSA"/>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_xycg4LLSEe2PMPdly4NOSA" client="_QirwYLLSEe2PMPdly4NOSA" supplier="_d_1HcLLREe2PMPdly4NOSA"/>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_zYJTYLLSEe2PMPdly4NOSA" client="_Xs6QULKvEe2PMPdly4NOSA _QKzb4LLSEe2PMPdly4NOSA" supplier="_ZLEX8LLREe2PMPdly4NOSA"/>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_1ndDkLLSEe2PMPdly4NOSA" client="_TcG0kLLSEe2PMPdly4NOSA" supplier="_lsfRILLREe2PMPdly4NOSA"/>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_2-JJsLLSEe2PMPdly4NOSA" client="_TCieALLSEe2PMPdly4NOSA" supplier="_nSfloLLREe2PMPdly4NOSA"/>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_4wqQMLLSEe2PMPdly4NOSA" client="_ShaG4LLSEe2PMPdly4NOSA" supplier="_ppQosLLREe2PMPdly4NOSA"/>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_56EvULLSEe2PMPdly4NOSA" client="_SO8d4LLSEe2PMPdly4NOSA" supplier="_Xs6QULKvEe2PMPdly4NOSA"/>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_7LZ0ULLSEe2PMPdly4NOSA" client="_R8YHMLLSEe2PMPdly4NOSA" supplier="_r_2FkLLREe2PMPdly4NOSA"/>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_9L0z8LLSEe2PMPdly4NOSA" client="_Rig1sLLSEe2PMPdly4NOSA" supplier="_aMO6ALLREe2PMPdly4NOSA"/>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_AHKjsLLTEe2PMPdly4NOSA" client="_RSNI0LLSEe2PMPdly4NOSA" supplier="_bYUSoLLREe2PMPdly4NOSA"/>
+  <packagedElement xmi:type="uml:InformationFlow" xmi:id="_DX_bQLLTEe2PMPdly4NOSA" informationSource="_SO8d4LLSEe2PMPdly4NOSA" informationTarget="_Rig1sLLSEe2PMPdly4NOSA"/>
+  <packagedElement xmi:type="uml:InformationFlow" xmi:id="_ElfwMLLTEe2PMPdly4NOSA" informationSource="_R8YHMLLSEe2PMPdly4NOSA" informationTarget="_Rig1sLLSEe2PMPdly4NOSA"/>
+  <packagedElement xmi:type="uml:InformationFlow" xmi:id="_FwMowLLTEe2PMPdly4NOSA" informationSource="_ShaG4LLSEe2PMPdly4NOSA" informationTarget="_Rig1sLLSEe2PMPdly4NOSA"/>
+  <packagedElement xmi:type="uml:InformationFlow" xmi:id="_HQuAULLTEe2PMPdly4NOSA" informationSource="_TcG0kLLSEe2PMPdly4NOSA" informationTarget="_QKzb4LLSEe2PMPdly4NOSA _Xs6QULKvEe2PMPdly4NOSA"/>
+  <packagedElement xmi:type="uml:InformationFlow" xmi:id="_IJVqYLLTEe2PMPdly4NOSA" informationSource="_TCieALLSEe2PMPdly4NOSA" informationTarget="_QKzb4LLSEe2PMPdly4NOSA"/>
+  <packagedElement xmi:type="uml:InformationFlow" xmi:id="_MlAkcLLTEe2PMPdly4NOSA" informationSource="_QirwYLLSEe2PMPdly4NOSA" informationTarget="_Q1msYLLSEe2PMPdly4NOSA"/>
+  <packagedElement xmi:type="uml:InformationFlow" xmi:id="_O1bu8LLTEe2PMPdly4NOSA" informationSource="_Q1msYLLSEe2PMPdly4NOSA" informationTarget="_QirwYLLSEe2PMPdly4NOSA"/>
+  <packagedElement xmi:type="uml:InformationFlow" xmi:id="_QBzbcLLTEe2PMPdly4NOSA" informationSource="_QirwYLLSEe2PMPdly4NOSA" informationTarget="_QKzb4LLSEe2PMPdly4NOSA"/>
+  <packagedElement xmi:type="uml:InformationFlow" xmi:id="_RF25cLLTEe2PMPdly4NOSA" informationSource="_QKzb4LLSEe2PMPdly4NOSA" informationTarget="_QirwYLLSEe2PMPdly4NOSA"/>
+  <packagedElement xmi:type="uml:InformationFlow" xmi:id="_SuCYMLLTEe2PMPdly4NOSA" informationSource="_RSNI0LLSEe2PMPdly4NOSA" informationTarget="_QirwYLLSEe2PMPdly4NOSA"/>
+  <packagedElement xmi:type="uml:InformationFlow" xmi:id="_ZuduALLTEe2PMPdly4NOSA" informationSource="_Rig1sLLSEe2PMPdly4NOSA" informationTarget="_QirwYLLSEe2PMPdly4NOSA"/>
+  <packagedElement xmi:type="uml:InformationFlow" xmi:id="_bAO34LLTEe2PMPdly4NOSA" informationSource="_QirwYLLSEe2PMPdly4NOSA _Xs6QULKvEe2PMPdly4NOSA" informationTarget="_Rig1sLLSEe2PMPdly4NOSA"/>
+  <packagedElement xmi:type="uml:InformationFlow" xmi:id="_cHNuELLTEe2PMPdly4NOSA" informationSource="_QirwYLLSEe2PMPdly4NOSA" informationTarget="_RSNI0LLSEe2PMPdly4NOSA"/>
+</uml:Model>

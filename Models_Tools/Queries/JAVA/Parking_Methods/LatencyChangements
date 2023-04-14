@@ -1,0 +1,71 @@
+	public double Latency(ResourceSet st) {
+		double latency = 0;
+		double T, d;
+
+		T = enhancementT(st);
+		// sSystem.out.println(T);
+		d = 0.00787;
+		latency = T + d;
+
+		return latency;
+	}
+
+public double Latencychangement(ResourceSet rs) {
+		double li = 0, lc = 0;
+		double d = 0.00787;
+		for (Attribute at : IterableExtensions.filter(IteratorExtensions.toIterable(rs.getAllContents()),
+				Attribute.class)) {
+			if (at.getInstanceOf().getName().contains("image_quality")) {
+				if (Double.parseDouble(at.getValue()) < 50.00)
+					li += 0.702;
+
+			}
+		}
+		double l = Latency(rs);
+		
+		lc = li + d;
+		double m = 100-(((lc - l) / l) * 100);
+		System.out.println("the changement in the latency is estimated to " + m +" %");
+		return lc;
+	}
+
+
+
+public double enhancementT(ResourceSet st) {
+		double enhanceT = 0.0f;
+		double t = 0;
+		HashMap<String, Double> EnTime = new HashMap<String, Double>();
+		for (FogResource fn : IterableExtensions.filter(IteratorExtensions.toIterable(st.getAllContents()),
+				FogResource.class)) {
+			for (Tag tag : fn.getTags()) {
+				if (tag.getKey().contains("detection_quality")) {
+					switch (tag.getValue()) {
+					case "veryhigh":
+						EnTime.put(fn.getName(), (double) 0);
+
+						break;
+					case "high":
+						EnTime.put(fn.getName(), (double) 0);
+						break;
+
+					case "moderate":
+						EnTime.put(fn.getName(), (double) 0);
+						break;
+					case "low":
+						EnTime.put(fn.getName(), 0.702);
+
+						break;
+					case "verylow":
+						EnTime.put(fn.getName(), 0.702);
+						break;
+					}
+				}
+			}
+
+		}
+		for (double f : EnTime.values()) {
+			// System.out.println("value f="+f);
+			enhanceT += f;
+		}
+		return enhanceT;
+	}

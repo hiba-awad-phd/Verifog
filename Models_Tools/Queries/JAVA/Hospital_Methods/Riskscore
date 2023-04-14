@@ -1,0 +1,77 @@
+	private void getriskscore(String Node, ResourceSet rs) {
+		double riskscore = 55;
+		double impact = 1;
+		for (FogResource fR : IterableExtensions.filter(IteratorExtensions.toIterable(rs.getAllContents()),
+				FogResource.class)) {
+
+			if (fR.getName() == Node) {
+				for (Tag t : fR.getTags()) {
+					// System.out.println(t.getKey() +" "+ t.getValue());
+					if (t.getKey().contains("impact")) {
+						// if(t.getValue()=="A")
+						// System.out.println("impact=100" );
+						switch (t.getValue()) {
+						case "A":
+							impact = 100;
+							break;
+						case "B":
+							impact = 50;
+							break;
+						case "C":
+							impact = 20;
+							break;
+
+						}
+
+						double proba = getproba(Node, rs);
+						riskscore = impact * proba;
+
+						Node = fR.getName();
+
+					}
+
+				}
+				System.out.println("The risk score of " + Node + " is : " + riskscore);
+			}
+		}
+
+	}
+
+	private double getproba(String fName, ResourceSet rs) {
+
+		double proba = 0;
+
+		for (FogResource e : IterableExtensions.filter(IteratorExtensions.toIterable(rs.getAllContents()),
+				FogResource.class)) {
+			if (e.getName() == fName) {
+				for (Tag t : e.getTags()) {
+					if (t.getKey().contains("securityLocation")) {
+
+						switch (t.getValue()) {
+						case "veryHigh":
+							proba = 0;
+							break;
+						case "High":
+							proba = 0.25;
+							break;
+						case "moderate":
+							proba = 0.5;
+							break;
+						case "low":
+							proba = 0.75;
+							break;
+						case "verylow":
+							proba = 1;
+							break;
+
+						}
+						// System.out.println(proba);
+					}
+
+				}
+			}
+
+		}
+
+		return proba;
+	}

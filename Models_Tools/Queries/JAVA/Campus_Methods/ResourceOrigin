@@ -1,0 +1,15 @@
+	public void SourceType(FogResource e, ResourceSet set) {
+		String s;
+		for (FogResource fn : IterableExtensions.filter(IteratorExtensions.toIterable(set.getAllContents()),
+				FogResource.class)) {
+			if (fn.getName() == e.getName()) {
+				for (Tag tag : fn.getTags()) {
+					if (tag.getKey().contains("SourceEnergy")) {
+						s = tag.getValue();
+						System.out.println("The source energy type of the node " + e.getName() + " is " + s);
+					}
+				}
+			}
+		}
+
+	}

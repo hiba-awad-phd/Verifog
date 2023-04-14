@@ -1,0 +1,20 @@
+	public void Dectection_reliability(ResourceSet s) {
+		// String evalue=null;
+		int evalue = 0, sum = 0;
+		for (Attribute at : IterableExtensions.filter(IteratorExtensions.toIterable(s.getAllContents()),
+				Attribute.class)) {
+			if (at.getFogresource().getName().contains("ecam")) {
+				evalue = Integer.parseInt(at.getValue());
+			} else if (at.getInstanceOf().getName().contains("detected_cars"))
+				sum += Integer.parseInt(at.getValue());
+
+		}
+		if (sum == evalue)
+			System.out.println("the reliability of the detection is 100% approved");
+		else {
+			Double d = new Double(sum);
+			Double di = new Double(evalue);
+			double r = (d / di) * 100;
+			System.out.println("the reliability of the detection is " + r + "%");
+		}
+	}
