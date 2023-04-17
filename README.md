@@ -26,7 +26,7 @@ VeriFog: A Generic Model-based Approach for Verifying Fog Systems at Design Time
 ### JAVA code
 
 To query in JAVA you need to make sure that you are putting the JAVA methods in fr.imta.semafor.fogDsl/src/fr/imta/semafor/handlers/InspectionHandler.java file.
-
+**Make sure that all the attributes needed for the methods exist in the YAML files**
 In the workspace right-click on any file existing in your favorite use case -> SeMaFoR -> QueryModel 
 The results will appear in the first eclipse window
 
